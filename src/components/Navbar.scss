@@ -1,0 +1,100 @@
+@import '/src/Styles.scss';
+nav .background{
+    background-color: $accent-color;
+    width: 722px;
+    height: 722px;
+    position: absolute;
+    left: -480px;
+    top: -330px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.logo{
+    position: absolute;
+    padding-left: 45px;
+    padding-top: 60px;
+    height: 137px;
+    z-index: 2;
+    cursor: pointer;
+}
+.logo img {
+    transition: transform 0.25s ease;
+}
+
+.logo.scaled img {
+    animation: scaleDownUp 0.2s forwards;
+}
+
+@keyframes scaleDownUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100vw;
+}
+
+header nav ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+header nav.open ul{
+    height: 350px;
+}
+
+header nav ul li{
+    width: 120px;
+    text-align: start;
+    list-style-type: none;
+    position: absolute;
+    font-weight: $semi-bold;
+    color: $black-300;
+    transform: translate(0, 0);
+    transition: transform 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+nav ul li a{
+    display: block;
+    width: 100%;
+}
+
+nav.open ul li:nth-child(1){transform: translate(260px, 30px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(2){transform: translate(255px, 80px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(3){transform: translate(240px, 130px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(4){transform: translate(218px, 180px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(5){transform: translate(186px, 230px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(6){transform: translate(130px, 280px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(7){transform: translate(40px, 330px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+nav:not(.open) ul li:nth-child(1) {transition-duration: 0.2s;}
+nav:not(.open) ul li:nth-child(2) {transition-duration: 0.3s;}
+nav:not(.open) ul li:nth-child(3) {transition-duration: 0.4s;}
+nav:not(.open) ul li:nth-child(4) {transition-duration: 0.5s;}
+nav:not(.open) ul li:nth-child(5) {transition-duration: 0.6s;}
+nav:not(.open) ul li:nth-child(6) {transition-duration: 0.7s;}
+nav:not(.open) ul li:nth-child(7) {transition-duration: 0.8s;}
+
+nav .right-logo{
+    position: relative;
+    margin-left: auto;
+    padding: 30px 50px 0 0;
+}
+
+nav .right-logo img {
+    width: 170px;
+}
