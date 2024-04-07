@@ -21,6 +21,7 @@ function Navbar() {
   return (
     <header>
         <nav className={isOpen ? 'open' : ''}>
+          <div className="background layer-two"></div>
           <div className="background"></div>
           <div className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
             <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="Logo" onClick={handleLogoClick}/>

@@ -1,7 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Home.scss';
+import Button from '../components/Button';
+import KeyOffering from '../components/KeyOffering';
 
 function Home() {
+
+  const [name, setName] = useState('Your name');
+  const [company, setCompany] = useState('Your website or company');
+  const [project, setProject] = useState('discuss a software development project');
+  const [email, setEmail] = useState('Your email');
+
+  const handleContentChange = (setter, defaultValue, event) => {
+    const content = event.target.textContent.trim();
+    setter(content === '' ? defaultValue : content);
+  };
+
   return (
     <>
     <div className='hero'>
@@ -15,7 +28,7 @@ function Home() {
     </div>
 
     {/* What we offer section */}
-    <section>
+    <section id='offerings'>
       <p className="section-header">What we offer</p>
       <div className="grid">
         {offers.map((offer, index) => (
@@ -25,11 +38,86 @@ function Home() {
           </div>
         ))}
       </div>
-      <button>View Solutions</button>
+      <Button text="View Solutions" onClickRoute="/solutions"/>
     </section>
 
-    <section>
+    <section id='animated-offerings'>
+        <ul>
+          {keyOffers.map((offer, index) => (
+            <li>
+              <KeyOffering
+              index={index}
+              {...offer}
+              />
+            </li>
+          ))}
+        </ul>
+    </section>
 
+    <section id='projects'>
+      <p className="section-header">Our Projects</p>
+      <div className="grid">
+        {projects.map((project, index) => (
+          <div className="project"
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + project.imagePath})` }}>
+            <p className="title">{project.title}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id='quotation'>
+      <p className="header">Reach out to us</p>
+      <p className="header">for Visionary IT Solutions.</p>
+      <Button text={"Contact"} rightIcon={<i class="fa fa-arrow-right"></i>
+}/>
+      <div className="form-box">
+        <div className="top">
+          <p className="title">Request a Quote</p>
+          <p className="description">Leave your details below and we will be in touch.</p>
+        </div>
+        <div className="hr-line"></div>
+        <div className="bottom">
+          <div className="note">
+            <p>To receive priority access to our client engagement team, simply provide your details.</p>
+            <p>We look forward to being in touch with you.</p>
+          </div>
+          <form action="">
+            <p className="greeting">Hey, Phinexa team!</p>
+            <div className="body">
+              <span>My name is </span>
+              <span 
+              className='editable-span' 
+              contenteditable="true"
+              onBlur={(event) => handleContentChange(setName, 'Your name', event)}
+              >{name}</span>
+              <span> from </span>
+              <span 
+              contenteditable="true" 
+              className='editable-span'
+              onBlur={(event) => handleContentChange(setCompany, 'Your website or company', event)}
+              >{company}</span>
+              <span>. I'd like to </span>
+              <span 
+              contenteditable="true" 
+              className='editable-span'
+              onBlur={(event) => handleContentChange(setProject, 'discuss a software development project', event)}
+              >{project}</span>
+              <span> and you can reach me at </span>
+              <span 
+              contenteditable="true" 
+              className='editable-span'
+              onBlur={(event) => handleContentChange(setEmail, 'Your email', event)}
+              >{email}</span>
+              <span>.</span>
+              </div>
+          </form>
+        </div>
+        <div className="button-box">
+          <Button text={"Submit"} rightIcon={<i class="fa fa-paper-plane-o"></i>
+}/>
+        </div>
+      </div>
     </section>
     </>
   )
@@ -59,6 +147,46 @@ const offers = [
   {
     title: "Container Orchestration",
     description: "Specialize in managing and automating containerized applications.  Standardize deployment processes for greater efficiency, agility, and reliability in software delivery. Embrace modern application architectures and drive innovation at scale."
+  }
+]
+
+const keyOffers = [
+  {
+    imagePath: "/images/software-development.svg",
+    title: "Software Development",
+    description: "From strategic IT solutions to language support, we are your one-stop destination for excellence.",
+    route: "/solutions/software-development"
+  },
+  {
+    imagePath: "/images/cyber-security.svg",
+    title: "Cyber Security",
+    description: "We provide cutting-edge solutions that empower businesses to thrive in the digital age securely.",
+    route: "/solutions/software-development"
+  },
+  {
+    imagePath: "/images/devops-as-a-service.svg",
+    title: "DevOps as a Service",
+    description: "For strategic IT solutions or language support, we're your comprehensive hub for optimizing operations.",
+    route: "/solutions/software-development"
+  }
+]
+
+const projects = [
+  {
+    imagePath: '/images/placeholder-image.png',
+    title: 'Cyber Security'
+  },
+  {
+    imagePath: '/images/placeholder-image.png',
+    title: 'Cyber Security'
+  },
+  {
+    imagePath: '/images/placeholder-image.png',
+    title: 'Cyber Security'
+  },
+  {
+    imagePath: '/images/placeholder-image.png',
+    title: 'Cyber Security'
   }
 ]
 

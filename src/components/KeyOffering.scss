@@ -1,0 +1,32 @@
+@import '/src/Styles.scss';
+.animated-offering {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 120px 0 120px;
+}
+
+.animated-offering img{
+    max-width: 550px;
+    height: auto;
+}
+
+.animated-offering .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 592px;
+    text-align: start;
+}
+
+.animated-offering .content .title {
+    font-size: 32px;
+    font-weight: $semi-bold;
+}
+
+.animated-offering .content .description {
+    font-size: 18px;
+    font-weight: $regular;
+}
