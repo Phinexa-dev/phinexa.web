@@ -2,6 +2,22 @@ import React, {useState} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
+import { motion } from "framer-motion"
+
+const gridContainerVariant = {
+  hidden: {opacity: 0},
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+}
+
+const gridElementVariant = {
+  hidden: {opacity: 0, x: "-50px"},
+  show: {opacity: 1, x: "0px"}
+}
 
 function Home() {
 
@@ -18,26 +34,45 @@ function Home() {
   return (
     <>
     <div className='hero'>
-        <div className="left">
+        <motion.div 
+        variants={{
+          hidden: {x: "-50%"},
+          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+        }}
+        initial="hidden"
+        whileInView="show"
+        className="left">
             <p>Simplifying</p>
             <p>IT Complexity</p>
-        </div>
-        <div className="right">
+        </motion.div>
+        <motion.div 
+        variants={{
+          hidden: {x: "50%"},
+          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+        }}
+        initial="hidden"
+        whileInView="show"
+        className="right">
             <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" />
-        </div>
+        </motion.div>
     </div>
 
     {/* What we offer section */}
     <section id='offerings'>
       <p className="section-header">What we offer</p>
-      <div className="grid">
+      <motion.div 
+      variants={gridContainerVariant}
+      initial="hidden"
+      whileInView="show"
+      // animate="show"
+      className="grid">
         {offers.map((offer, index) => (
-          <div className="offer" key={index}>
+          <motion.div variants={gridElementVariant} className="offer" key={index}>
             <p className="title">{offer.title}</p>
             <p className="description">{offer.description}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <Button text="View Solutions" onClickRoute="/solutions"/>
     </section>
 
@@ -114,7 +149,7 @@ function Home() {
           </form>
         </div>
         <div className="button-box">
-          <Button text={"Submit"} rightIcon={<i class="fa fa-paper-plane-o"></i>
+          <Button text={"Submit"} rightIcon={<i class="far fa-paper-plane"></i>
 }/>
         </div>
       </div>
