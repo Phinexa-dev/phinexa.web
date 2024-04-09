@@ -124,3 +124,36 @@ nav .right-logo img {
 nav.open .background.layer-two {
     display: flex;
 }
+
+@media screen and  (max-width: 1400px) {
+    .logo {
+        padding-left: 27px;
+        padding-top: 40px;
+    }
+    
+    .logo img{
+        height: 70px;
+    }
+
+    nav .background{
+        width: 422px;
+        height: 422px;
+        left: -290px;
+        top: -210px;
+    }
+
+    header nav .background.layer-two{
+        width: 562px;
+        height: 562px;
+        left: -261px;
+        top: -320px;
+    }
+
+    nav.open ul li:nth-child(1){transform: translate(152px, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){transform: translate(140px, 30px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){transform: translate(127px, 60px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){transform: translate(110px, 88px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){transform: translate(90px, 115px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){transform: translate(60px, 140px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){transform: translate(25px, 165px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+}
