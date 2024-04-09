@@ -37,7 +37,7 @@ function Navbar() {
               <Link to="/contact">What We do</Link>
             </li>
             <li>
-              <Link to="/contact">Our Approach</Link>
+              <Link to="/our-approach">Our Approach</Link>
             </li>
             <li>
               <Link to="/contact">Industries</Link>
