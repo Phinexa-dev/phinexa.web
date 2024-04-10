@@ -10,3 +10,18 @@
 .custom-button span{
     margin-left: 10px;
 }
+
+@media screen and (max-width: 1064px) {
+    .custom-button{
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .custom-button{
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+}
