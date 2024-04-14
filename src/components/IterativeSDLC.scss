@@ -47,11 +47,13 @@ line.line.active{
     align-items: center;
     justify-content: center;
     position: absolute;
-    height: 614px;
-    width: 614px;
+    // height: 614px;
+    // width: 614px;
+    height: 70%;
+    width: 44%;
     padding: 100px;
     box-sizing: border-box;
-    right: 80px;
+    right: 0px;
 }
 
 .iteration-content.active {
@@ -79,4 +81,111 @@ line.line.active{
 
 .sldc{
     position: relative
+}
+
+.sldc svg{
+    width: 100%;
+    height: auto;
+}
+
+.sldc-mobile{
+    display: none;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+// .sldc-iteration:nth-child(9){
+//     grid-column: span 2;
+//     justify-self: center;
+// }
+
+.sldc-iteration{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 300px;
+}
+
+.sldc-iteration .index{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 2px solid #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sldc-iteration .index p{
+    font-size: 20px;
+}
+
+.sldc-iteration .title{
+    margin-top: 10px;
+    font-size: 18px;
+    color: $primary-color;
+}
+
+.sldc-iteration .description{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1652px) {
+    .iteration-content{
+        padding: 50px;
+    }
+    .iteration-content .title{
+        font-size: 28px;
+    }
+    .iteration-content .description .word{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .iteration-content{
+        padding: 40px;
+    }
+    .iteration-content .title{
+        font-size: 24px;
+    }
+    .iteration-content .description .word{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .iteration-content{
+        padding: 30px;
+    }
+    .iteration-content .title{
+        font-size: 16px;
+    }
+    .iteration-content .description .word{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    section.approach .section-header{
+        margin-bottom: 20px;
+    }
+
+    .sldc{
+        display: none;
+    }   
+
+    .sldc-mobile{
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .sldc-mobile{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sldc-iteration{
+        max-width: unset;
+    }
 }

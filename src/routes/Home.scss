@@ -1,11 +1,13 @@
 @import '/src/Styles.scss';
 .hero {
-    padding: 120px 192px 0 192px;
+    padding: 0px 192px 0 192px;
+    padding-top: 130px;
     display: flex;
     flex-direction: row;
     height: 70vh;
     box-sizing: border-box;
     gap: 20px;
+    overflow-x: hidden;
 }
 
 .hero .left{
@@ -252,13 +254,23 @@ section#quotation .header:nth-child(2){
 @media screen and  (max-width: 1720px) {
     .form-box .top{
         flex-direction: column;
+        gap: 0px;
     }
     .form-box .top .description{
         margin-left: 0px;
-        text-align: center;
+        width: 100%;
+        justify-content: center;
     }
     .form-box .top p{
         text-align: center;
+    }
+    .form-box .bottom .note{
+        width: 30%;
+        max-width: none;
+    }
+
+    .form-box .bottom form{
+        width: 70%;
     }
 }
 @media screen and  (max-width: 1572px) {
@@ -357,6 +369,26 @@ section#quotation .header:nth-child(2){
     section#projects .grid .project .title{
         font-size: 20px;
     }
+
+    .form-box .bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-box .bottom .note{
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .form-box .bottom form{
+        width: 100%;
+    }
+
+    .form-box .button-box{
+        margin-top: 12px;
+    }
 }
 
 @media screen and (max-width: 1064px) {
@@ -374,6 +406,18 @@ section#quotation .header:nth-child(2){
         font-size: 32px;
     }
 
+    .form-box .top .title{
+        font-size: 24px;
+    }
+
+    .form-box .bottom ,
+    .form-box .bottom form .body{
+        font-size: 14px;
+    }
+    .form-box .bottom .note{
+        gap: 5px;
+    }
+
 }
 
 @media screen and (max-width: 920px) {
@@ -383,6 +427,10 @@ section#quotation .header:nth-child(2){
 
     section#projects .project{
         height: 320px;
+    }
+
+    .form-box .bottom form .body{
+        margin-top: 10px;
     }
 }
 
@@ -459,6 +507,19 @@ section#quotation .header:nth-child(2){
     section#quotation .form-box{
         margin-top: 30px;
     }
+
+    .form-box .bottom form .greeting{
+        font-size: 18px;
+    }
+
+    .form-box .bottom form .body span{
+        line-height: 25px;
+    }
+
+    .form-box .bottom form .body,
+    .form-box .bottom .note p{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -469,9 +530,28 @@ section#quotation .header:nth-child(2){
         width: 100%;
     }
 
+    .form-box .hr-line{
+        margin: 10px;
+    }
+
+    .form-box .top .title{
+        font-size: 20px;
+    }
+
+    .form-box .bottom {
+        gap: 10px;
+    }
+
+    .form-box .bottom form .greeting{
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (max-width: 494px) {
+    .hero{
+        padding-top: 110px;
+    }
     .hero .right{
         width: 100%;
     }
@@ -486,5 +566,21 @@ section#quotation .header:nth-child(2){
 
     section#quotation .header{
         font-size: 20px;
+    }
+
+    .form-box .top .title{
+        font-size: 18px;
+    }
+
+    .form-box .bottom form .greeting{
+        font-size: 14px;
+    }
+
+    .form-box .bottom form .body span{
+        line-height: 20px;
+    }
+
+    .form-box{
+        padding: 24px;
     }
 }

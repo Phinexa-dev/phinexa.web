@@ -81,12 +81,12 @@ increased efficiency</p>
     </section>
 
     <section className='approach'>
-        <p className="section-title">Collaboration Process</p>
+        <p className="section-header">Collaboration Process</p>
         <IterativeSDLC/>
     </section>
 
-    <section className='approach'>
-        <p className="section-title">Client Benefits</p>
+    <section className='client-benefits'>
+        <p className="section-header">Client Benefits</p>
         <motion.div 
         variants={gridContainerVariant}
         initial="hidden"

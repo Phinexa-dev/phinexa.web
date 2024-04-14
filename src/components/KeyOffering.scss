@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 120px 0 120px;
+    overflow-x: hidden;
 }
 
 .animated-offering img{
@@ -43,6 +44,7 @@
     section#animated-offerings{
         height: 2000px;
         background-size: cover;
+        overflow-x: hidden;
     }
 }
 

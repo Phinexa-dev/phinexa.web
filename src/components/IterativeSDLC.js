@@ -99,6 +99,18 @@ function IterativeSDLC() {
     };
 
     return (
+        <>
+        <div className='sldc-mobile'>
+            {circleContent.map((circleItem, index) => (
+                <div className="sldc-iteration">
+                    <div className="index">
+                        <p>{index+1}</p>
+                    </div>
+                    <p className="title">{circleItem.title}</p>
+                    <p className="description">{circleItem.description}</p>
+                </div>
+            ))}
+        </div>
         <div className='sldc'>
             {circleContent.map((circleItem, index) => (
                 <div className={`iteration-content ${count === index ? "active" : ""}`}>
@@ -157,6 +169,7 @@ function IterativeSDLC() {
 </svg>
 
         </div>
+        </>
       );
 }
 

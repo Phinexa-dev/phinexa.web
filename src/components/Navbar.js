@@ -18,6 +18,10 @@ function Navbar() {
     }
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header>
         <nav className={isOpen ? 'open' : ''}>
@@ -28,7 +32,7 @@ function Navbar() {
           </div>
           <ul className={linkAnimation ? 'animate' : ''}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={closeMenu}>Home</Link>
             </li>
             <li>
               <Link to="/about">Solutions</Link>
@@ -37,7 +41,7 @@ function Navbar() {
               <Link to="/contact">What We do</Link>
             </li>
             <li>
-              <Link to="/our-approach">Our Approach</Link>
+              <Link to="/our-approach" onClick={closeMenu}>Our Approach</Link>
             </li>
             <li>
               <Link to="/contact">Industries</Link>

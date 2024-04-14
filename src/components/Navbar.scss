@@ -162,10 +162,13 @@ nav.open .background.layer-two {
     
     nav.open ul{
         background: white;
+        transition: background 0.2s ease-in;
     }
-
+    
     nav ul{
         background: transparent;
+        transition: background 0.5s ease-out;
+        transition-delay: 0.2s;
     }
 }
 
@@ -209,9 +212,14 @@ nav.open .background.layer-two {
 
     nav:not(.open) ul li {
         transform: translate(200%, 0px);
-        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
+    header nav ul{
+        
+    }
+
+    header nav ul,
     header nav.open ul{
         margin-top: 0;
         height: 100vh;
@@ -225,13 +233,17 @@ nav.open .background.layer-two {
         margin-top: 12px;
     }
 
-    nav ul li{
-        opacity: 0;
-    }
+    // nav ul li{
+    //     opacity: 0;
+    // }
 
     nav.open ul li{
         opacity: 1;
         text-align: center;
+    }
+
+    nav ul li {
+        transform: translate(0, 0);
     }
 
     nav.open ul li:nth-child(1){left:50%; transform: translate(-50%, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
