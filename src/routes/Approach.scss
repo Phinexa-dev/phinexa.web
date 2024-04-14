@@ -96,33 +96,6 @@ section#benefits .paragraph{
     margin-bottom: 30px;
 }
 
-.sldc .buttons{
-    transform: translateY(100px);
-    display: flex;
-    flex-direction: row;
-    // gap: 150px;
-
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 70%;
-    width: 44%;
-    padding: 100px;
-    box-sizing: border-box;
-    right: 0px;
-}
-
-.buttons .btn-container{
-    display: flex;
-    flex-direction: row;
-    width: 140px;
-    justify-content: space-between;
-}
-
-.sldc .buttons i{
-    font-size: 35px;
-    color: $primary-color;
-}
 
 @media screen and (max-width: 1776px){
 
