@@ -69,9 +69,9 @@ function IterativeSDLC() {
         };
     
         window.addEventListener('keydown', handleKeyDown);
-    
+        
         return () => {
-          window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
 
@@ -112,28 +112,43 @@ function IterativeSDLC() {
             ))}
         </div>
         <div className='sldc'>
-            {circleContent.map((circleItem, index) => (
-                <div className={`iteration-content ${count === index ? "active" : ""}`}>
-                    <motion.p 
-                    variants={{
-                        hidden: {y: "50px"},
-                        show: {y: "0px", transition: { duration: 0.5, type: "spring", stiffness: 50 }}
-                    }}
-                    initial="hidden"
-                    whileInView="show"
-                    className="title">{circleItem.title}</motion.p>
-                    <p className="description">{circleItem.description.split(" ").map((word , i) => (
-                        <motion.span 
+            <div className="container">
+                {circleContent.map((circleItem, index) => (
+                    <div className={`iteration-content ${count === index ? "active" : ""}`}>
+                        <motion.p 
                         variants={{
-                            hidden: {opacity: 0},
-                            show: {opacity: 1, transition: { duration: 0.5, delay: 0.1*(i)}}
+                            hidden: {y: "50px"},
+                            show: {y: "0px", transition: { duration: 0.5, type: "spring", stiffness: 50 }}
                         }}
                         initial="hidden"
                         whileInView="show"
-                        className='word' key={i}>{word}</motion.span>
-                    ))}</p>
+                        className="title">{circleItem.title}</motion.p>
+                        <p className="description">{circleItem.description.split(" ").map((word , i) => (
+                            <motion.span 
+                            variants={{
+                                hidden: {opacity: 0},
+                                show: {opacity: 1, transition: { duration: 0.5, delay: 0.1*(i)}}
+                            }}
+                            initial="hidden"
+                            whileInView="show"
+                            className='word' key={i}>{word}</motion.span>
+                        ))}</p>
+                    </div>
+                ))}
+                <div className="buttons">
+                    <div className='btn-container'>
+                        <motion.i
+                        variants={{
+                            stay: {x: 0},
+                            move: {x: -30, transition: { duration: 1}}
+                        }}
+                        initial="stay"
+                        onKeyDown="move"
+                         class="fa fa-chevron-left" aria-hidden="true"></motion.i>
+                        <motion.i class="fa fa-chevron-right" aria-hidden="true"></motion.i>
+                    </div>
                 </div>
-            ))}
+            </div>
           <svg width="1394" height="871" viewBox="0 0 1394 871" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line className={`line ${count === 8 ? "active" : ""}`} x1="792" y1="810" x2="792" y2="323" stroke="#BDBDBD" stroke-width="4"/>
             <circle cx="1085" cy="323" r="293" stroke="#BDBDBD" stroke-width="4"/>

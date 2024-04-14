@@ -4,10 +4,12 @@
     padding-top: 130px;
     display: flex;
     flex-direction: row;
-    height: 70vh;
+    // height: 70vh;
+    height: 700px;
     box-sizing: border-box;
     gap: 20px;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .hero .left{
@@ -251,6 +253,12 @@ section#quotation .header:nth-child(2){
     outline: none;
 }
 
+body,
+header{
+    border-left: 2px solid rgb(228, 228, 228);
+    border-right: 2px solid rgb(228, 228, 228);
+}
+
 @media screen and  (max-width: 1720px) {
     .form-box .top{
         flex-direction: column;
@@ -290,6 +298,9 @@ section#quotation .header:nth-child(2){
 
     .hero{
         justify-content: space-between;
+        // height: 50vh;
+        height: 600px;
+        // display: none;
     }
 
     .hero .right{
@@ -347,7 +358,8 @@ section#quotation .header:nth-child(2){
     }
 
     .hero{
-        height: 50vh;
+        // height: 50vh;
+        height: 500px;
     }
 
     .hero .left p:nth-child(2){
@@ -399,7 +411,8 @@ section#quotation .header:nth-child(2){
     }
 
     .hero{
-        height: 40vh;
+        // height: 40vh;
+        height: 450px;
     }
 
     section#quotation .header{
@@ -444,7 +457,8 @@ section#quotation .header:nth-child(2){
     }
 
     .hero{
-        height: 35vh;
+        // height: 35vh;
+        height: 380px;
     }
     .hero .left p:nth-child(2){
         font-size: 22px;
