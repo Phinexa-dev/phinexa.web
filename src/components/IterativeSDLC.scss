@@ -132,6 +132,35 @@ line.line.active{
     font-size: 12px;
 }
 
+
+.sldc .buttons{
+    transform: translateY(100px);
+    display: flex;
+    flex-direction: row;
+    // gap: 150px;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 70%;
+    width: 44%;
+    padding: 100px;
+    box-sizing: border-box;
+    right: 0px;
+}
+
+.buttons .btn-container{
+    display: flex;
+    flex-direction: row;
+    width: 140px;
+    justify-content: space-between;
+}
+
+.sldc .buttons i{
+    font-size: 35px;
+    color: $primary-color;
+}
+
 @media screen and (max-width: 1652px) {
     .iteration-content{
         padding: 50px;
@@ -141,6 +170,12 @@ line.line.active{
     }
     .iteration-content .description .word{
         font-size: 16px;
+    }
+    .sldc .buttons{
+        transform: translateY(80px);
+    }
+    .sldc .buttons i{
+        font-size: 25px;
     }
 }
 
@@ -154,6 +189,15 @@ line.line.active{
     .iteration-content .description .word{
         font-size: 14px;
     }
+    .sldc .buttons{
+        transform: translateY(75px);
+    }
+    .buttons .btn-container{
+        width: 100px;
+    }
+    .sldc .buttons i{
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 1180px) {
@@ -165,6 +209,15 @@ line.line.active{
     }
     .iteration-content .description .word{
         font-size: 12px;
+    }
+    .sldc .buttons{
+        transform: translateY(60px);
+    }
+    .buttons .btn-container{
+        width: 80px;
+    }
+    .sldc .buttons i{
+        font-size: 18px;
     }
 }
 
@@ -179,6 +232,9 @@ line.line.active{
 
     .sldc-mobile{
         display: grid;
+    }
+    .buttons .btn-container{
+        width: 60px;
     }
 }
 
