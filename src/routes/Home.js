@@ -28,6 +28,7 @@ function Home() {
 
   const handleContentChange = (setter, defaultValue, event) => {
     const content = event.target.textContent.trim();
+    console.log(content);
     setter(content === '' ? defaultValue : content);
   };
 

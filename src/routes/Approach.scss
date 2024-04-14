@@ -1,0 +1,406 @@
+@import '/src/Styles.scss';
+.hero.approach{
+    // min-height: 756px;
+}
+
+.hero.approach .left{
+    width: 1400px;
+}
+
+section#benefits {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#benefits .top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section#benefits .top .pros{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 624px;
+    gap: 30px;
+}
+
+section#benefits .pros .title{
+    font-size: 35px;
+    font-weight: $regular;
+    color: $primary-color;
+}
+section#benefits .pros .images{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+section#benefits .pros .images .image .img-title{
+    font-size: 20px;
+    font-weight: $regular;
+    color: $primary-color;
+    text-align: center;
+}
+
+section#benefits .paragraph{
+    text-align: left;
+    font-size: 20px;
+    font-weight: $regular;
+    margin-top: 24px;
+}
+
+section.approach{
+    padding-top: 0px;
+}
+
+section .section-title{
+    font-size: 60px;
+    font-weight: $medium;
+    color: $primary-color;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.client-benefits .grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+}
+
+.client-benefits .grid .img img{
+    width: 100%;
+    height: auto;
+}
+
+.benefit{
+    text-align: left;
+}
+
+.benefit .title{
+    font-size: 30px;
+    font-weight: $medium;
+    color: $primary-color;
+    margin-bottom: 12px;
+}
+
+section#benefits .top .pros .description,
+section#benefits .paragraph{
+    font-size: 20px;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.sldc .buttons{
+    transform: translateY(100px);
+    display: flex;
+    flex-direction: row;
+    // gap: 150px;
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 70%;
+    width: 44%;
+    padding: 100px;
+    box-sizing: border-box;
+    right: 0px;
+}
+
+.buttons .btn-container{
+    display: flex;
+    flex-direction: row;
+    width: 140px;
+    justify-content: space-between;
+}
+
+.sldc .buttons i{
+    font-size: 35px;
+    color: $primary-color;
+}
+
+@media screen and (max-width: 1776px){
+
+    .hero.approach .left{
+        width: 70%;
+    }
+    .hero.approach .left p:nth-child(1){
+        font-size: 70px;
+    }
+
+    .hero.approach .left p:nth-child(2){
+        font-size: 40px;
+    }
+
+    .hero.approach .right {
+        align-items: end;
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 1652px) {
+    // .hero.approach{
+    //     // height: 55vh;
+    //     height: 500px
+    // }
+
+    section#benefits .top .pros{
+        width: 550px;
+        height: 100%;
+    }
+
+    section#benefits .top .pros .title{
+        font-size: 28px;
+    }
+
+    section#benefits .top .pros .description,
+    section#benefits .paragraph{
+        font-size: 16px;
+    }
+
+    section#benefits .top .pros .images{
+        // align-items: flex-end;
+    }
+
+    section#benefits .top .pros .images .image {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    section#benefits .top .pros .images .image .img-title{
+        font-size: 18px;
+    }
+
+    section#benefits .top .pros .images .image img{
+        width: 80%;
+    }
+
+    section.approach{
+        margin-bottom: 100px;
+    }
+
+    section.client-benefits{
+        padding-top: 0px;
+    }
+}
+
+@media screen and (max-width: 1522px) {
+    section#benefits .top .pros{
+        width: 490px;
+    }
+
+    .benefit .title{
+        font-size: 22px;
+    }
+    .benefit .description{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hero.approach{
+        // height: 48vh;
+        height: 550px;
+    }
+    section#benefits{
+        margin-bottom: 70px;
+    }
+
+    section#benefits .top{
+        gap: 20px;
+    }
+
+    section#benefits .top .pros{
+        width: 430px;
+        gap: 20px;
+    }
+
+    section#benefits .top .pros .title{
+        font-size: 24px;
+    }
+
+    section#benefits .top .pros .description,
+    section#benefits .paragraph{
+        font-size: 14px;
+    }
+
+    section#benefits .top .pros .images .image .img-title{
+        font-size: 16px;
+    }   
+
+    .hero.approach .left p:nth-child(1){
+        font-size: 55px;
+    }
+
+    .hero.approach .left p:nth-child(2){
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 1228px) {
+    section,
+    .hero{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .hero.approach{
+        padding-left: 100px;
+        padding-right: 100px;
+        // height: 40vh;
+        height: 470px;
+    }    
+
+    .hero.approach .left p:nth-child(1){
+        font-size: 45px;
+    }
+
+    .hero.approach .left p:nth-child(2){
+        font-size: 25px;
+    }
+    .client-benefits .grid{
+        gap: 30px;
+    }
+    .benefit .title{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    section#benefits{
+        margin-bottom: 40px;
+    }
+    section#benefits .top .pros{
+        gap: 14px;
+    }
+    section#benefits .top .pros .title{
+        font-size: 18px;
+    }
+    section#benefits .top .pros .description,
+    section#benefits .paragraph{
+        font-size: 12px;
+    }
+
+    section#benefits .top .pros .images .image .img-title{
+        font-size: 14px;
+    }
+
+    .benefit .title{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .hero.approach{
+        // height: 35vh;
+        height: 400px;
+    }
+
+    section#benefits .top{
+        flex-direction: column;
+    }
+    
+    section#benefits .top .pros{
+        max-width: none;
+        width: 100%;
+    }
+
+    .benefit .title{
+        font-size: 16px;
+    }
+    .benefit .description{
+        font-size: 12px;
+    }
+
+    .client-benefits .grid{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .hero.approach{
+        // height: 35vh;
+        height: 380px;
+    }    
+
+    .hero.approach .left p:nth-child(1){
+        font-size: 35px;
+    }
+
+    .hero.approach .left p:nth-child(2){
+        font-size: 20px;
+    }
+
+    section.approach{
+        margin-bottom: 60px;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+    .hero.approach .left p:nth-child(1){
+        font-size: 32px;
+    }
+
+    .hero.approach .left p:nth-child(2){
+        font-size: 18px;
+    }
+
+    .client-benefits .grid{
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .client-benefits .grid .benefit{
+        text-align: center;
+    }
+
+    .client-benefits .grid .img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 684px) {
+    .hero.approach{
+        height: 100%;
+    }
+
+    section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .hero.approach .left,
+    .hero.approach .right{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .hero.approach{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    section#benefits .top .pros{
+        text-align: center;
+    }
+    
+    section#benefits .top .pros .images{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section#benefits .top .pros .images .image{
+        width: 100%;
+        align-items: center;
+    }
+}
