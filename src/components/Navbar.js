@@ -35,7 +35,7 @@ function Navbar() {
               <Link to="/" onClick={closeMenu}>Home</Link>
             </li>
             <li>
-              <Link to="/about">Solutions</Link>
+              <Link to="/solutions"  onClick={closeMenu}>Solutions</Link>
             </li>
             <li>
               <Link to="/contact">What We do</Link>

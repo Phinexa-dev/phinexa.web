@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Approach.scss';
 import { motion } from "framer-motion"
 import IterativeSDLC from '../components/IterativeSDLC';
@@ -18,7 +18,14 @@ const gridElementVariant = {
     show: {opacity: 1, y: "0px"}
 }
 
+
 function Approach() {
+    
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+      
+
   return (
     <>
     <div className='hero approach'>
