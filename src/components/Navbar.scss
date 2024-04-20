@@ -211,7 +211,7 @@ nav.open .background.layer-two {
     }
 
     nav:not(.open) ul li {
-        transform: translate(200%, 0px);
+        transform: translate(205%, 0px);
         transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
@@ -219,7 +219,7 @@ nav.open .background.layer-two {
         
     }
 
-    header nav ul,
+    // header nav ul,
     header nav.open ul{
         margin-top: 0;
         height: 100vh;
@@ -229,13 +229,33 @@ nav.open .background.layer-two {
         justify-content: center;
     }
 
-    header nav.open ul li{
-        margin-top: 12px;
+    header nav ul{
+        margin-top: 0;
+        padding: 50px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: center;
     }
 
-    // nav ul li{
-    //     opacity: 0;
-    // }
+    header nav ul li{
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    @keyframes adjustHeight {
+        from {
+            height: 100vh;
+        }
+        to {
+            height: 'auto';
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    header nav:not(.open) ul{
+        animation: adjustHeight 2s forwards;
+    }
 
     nav.open ul li{
         opacity: 1;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
@@ -25,6 +25,10 @@ function Home() {
   const [company, setCompany] = useState('Your website or company');
   const [project, setProject] = useState('discuss a software development project');
   const [email, setEmail] = useState('Your email');
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   const handleContentChange = (setter, defaultValue, event) => {
     const content = event.target.textContent.trim();
