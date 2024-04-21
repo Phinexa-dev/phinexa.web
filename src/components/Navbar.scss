@@ -70,7 +70,6 @@ header nav ul{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 30px;
-    // background: white;
 }
 
 header nav.open ul{
@@ -92,6 +91,10 @@ header nav ul li{
 nav ul li a{
     display: block;
     width: 100%;
+}
+
+nav ul li a.active{
+    color: $secondary-color;
 }
 
 nav.open ul li:nth-child(1){transform: translate(260px, 30px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
@@ -199,7 +202,6 @@ nav.open .background.layer-two {
     }
 
     header nav ul{
-        // position: relative;
         width: 100vw;
     }
 
@@ -219,7 +221,6 @@ nav.open .background.layer-two {
         
     }
 
-    // header nav ul,
     header nav.open ul{
         margin-top: 0;
         height: 100vh;

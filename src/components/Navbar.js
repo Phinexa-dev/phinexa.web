@@ -1,11 +1,19 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.scss';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [linkAnimation, setLinkAnimation] = useState(false);
   const [isScaled, setIsScaled] = useState(false);
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    const pathname = location.pathname;
+    const lastSegment = pathname.substring(pathname.lastIndexOf("/") + 1);
+    setActiveLink(lastSegment);
+  }, [location.pathname]);
 
   const handleLogoClick = () => {
     setIsOpen(!isOpen);
@@ -32,25 +40,25 @@ function Navbar() {
           </div>
           <ul className={linkAnimation ? 'animate' : ''}>
             <li>
-              <Link to="/" onClick={closeMenu}>Home</Link>
+              <Link  to="/" onClick={closeMenu} className={activeLink === "" ? "active" : ""}>Home</Link>
             </li>
             <li>
-              <Link to="/solutions"  onClick={closeMenu}>Solutions</Link>
+              <Link to="/solutions"  onClick={closeMenu} className={activeLink === "solutions" ? "active" : ""}>Solutions</Link>
             </li>
             <li>
-              <Link to="/contact">What We do</Link>
+              <Link to="/what-we-do" onClick={closeMenu} className={activeLink === "what-we-do" ? "active" : ""}>What We do</Link>
             </li>
             <li>
-              <Link to="/our-approach" onClick={closeMenu}>Our Approach</Link>
+              <Link to="/our-approach" onClick={closeMenu} className={activeLink === "our-approach" ? "active" : ""}>Our Approach</Link>
             </li>
             <li>
-              <Link to="/contact">Industries</Link>
+              <Link to="/industries" onClick={closeMenu} className={activeLink === "industries" ? "active" : ""}>Industries</Link>
             </li>
             <li>
-              <Link to="/contact">About</Link>
+              <Link to="/about" onClick={closeMenu} className={activeLink === "about" ? "active" : ""}>About</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={closeMenu} className={activeLink === "contact" ? "active" : ""}>Contact</Link>
             </li>
           </ul>
 

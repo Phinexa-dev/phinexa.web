@@ -9,14 +9,38 @@ const gridContainerVariant = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15
+      staggerChildren: 0.25
     }
   }
 }
 
 const gridElementVariant = {
   hidden: {opacity: 0, x: "-50px"},
-  show: {opacity: 1, x: "0px"}
+  show: {
+    opacity: 1, 
+    x: "0px",
+  }
+}
+
+const gridProjectElementVariant = {
+  hidden: {opacity: 0, y: "-50%"},
+  show: {
+    opacity: 1, 
+    y: "0%",
+  }
+}
+
+const formBoxVariant = {
+  hidden: {opacity: 0, y: "50%"},
+  show: {
+    opacity: 1, 
+    y: "0%",
+    transition: {
+      duration: 1,
+      type: "spring", 
+      bounce: 0.5
+    }
+  }
 }
 
 function Home() {
@@ -69,10 +93,12 @@ function Home() {
       variants={gridContainerVariant}
       initial="hidden"
       whileInView="show"
-      // animate="show"
       className="grid">
         {offers.map((offer, index) => (
-          <motion.div variants={gridElementVariant} className="offer" key={index}>
+          <motion.div
+          variants={gridElementVariant}
+          className="offer" 
+          key={index}>
             <p className="title">{offer.title}</p>
             <p className="description">{offer.description}</p>
           </motion.div>
@@ -96,22 +122,32 @@ function Home() {
 
     <section id='projects'>
       <p className="section-header">Our Projects</p>
-      <div className="grid">
+      <motion.div 
+      variants={gridContainerVariant}
+      initial="hidden"
+      whileInView="show"
+      className="grid">
         {projects.map((project, index) => (
-          <div className="project"
+          <motion.div 
+          variants={gridProjectElementVariant}
+          className="project"
           style={{ backgroundImage: `url(${process.env.PUBLIC_URL + project.imagePath})` }}>
             <p className="title">{project.title}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
 
     <section id='quotation'>
       <p className="header">Reach out to us</p>
       <p className="header">for Visionary IT Solutions.</p>
       <Button text={"Contact"} rightIcon={<i class="fa fa-arrow-right"></i>
-}/>
-      <div className="form-box">
+} onClickRoute='/contact' />
+      <motion.div  
+      variants={formBoxVariant}
+      initial="hidden"
+      whileInView="show"
+      className="form-box">
         <div className="top">
           <p className="title">Request a Quote</p>
           <p className="description">Leave your details below and we will be in touch.</p>
@@ -157,7 +193,7 @@ function Home() {
           <Button text={"Submit"} rightIcon={<i class="far fa-paper-plane"></i>
 }/>
         </div>
-      </div>
+      </motion.div>
     </section>
     </>
   )

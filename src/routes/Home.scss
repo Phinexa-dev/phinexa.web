@@ -4,7 +4,6 @@
     padding-top: 130px;
     display: flex;
     flex-direction: row;
-    // height: 70vh;
     height: 700px;
     box-sizing: border-box;
     gap: 20px;
@@ -57,7 +56,6 @@ section#offerings .grid {
 .offer {
     display: flex;
     flex-direction: column;
-    // width: 470px;
     width: 100%;
     padding: 12px;
     text-align: left;
@@ -124,7 +122,6 @@ section#projects .grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
     gap: 60px 100px;
-    // width: 1536px;
 }
 
 section#projects .project{
@@ -298,9 +295,7 @@ header{
 
     .hero{
         justify-content: space-between;
-        // height: 50vh;
         height: 600px;
-        // display: none;
     }
 
     .hero .right{
@@ -358,7 +353,6 @@ header{
     }
 
     .hero{
-        // height: 50vh;
         height: 500px;
     }
 
@@ -411,7 +405,6 @@ header{
     }
 
     .hero{
-        // height: 40vh;
         height: 450px;
     }
 
@@ -457,7 +450,6 @@ header{
     }
 
     .hero{
-        // height: 35vh;
         height: 380px;
     }
     .hero .left p:nth-child(2){

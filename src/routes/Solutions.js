@@ -3,10 +3,10 @@ import './Solutions.scss';
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import SolutionsBackground from '../components/SolutionsBackground';
 
 function Solution() {
@@ -49,25 +49,35 @@ function Solution() {
     <section id='animated-projects'>
         <p className="header">If your project is just a glint in your eye, fully scoped, or a project you want to take to the next level.
 Worry no more! We've got you covered.</p>
-        <div className='my-swiper'>
+        <div 
+        className='my-swiper'
+        >
         <Swiper 
+        spaceBetween={80}
         breakpoints={{
-          0: { slidesPerView: 1},
-          1248: { slidesPerView: 2},
+          0: {
+            slidesPerView: 1,
+            scrollbar: {
+              el: '.swiper-scrollbar',
+              enabled: true,
+              hide: false,
+            }
+          },
+          1248: { 
+            slidesPerView: 2,
+          },
           500: {
-            pagination: {
-              dynamicBullets: true,}
+            scrollbar: {
+              enabled: false,
+            }
           }
         }}
-        // slidesPerView={2}
-        spaceBetween={80}
-        modules={[Navigation, Scrollbar, Pagination, A11y]} 
+        modules={[Navigation, Scrollbar]} 
         navigation={{ nextEl: ".next-arrow", prevEl: ".prev-arrow" }}
-        scrollbar={{ draggable: true }}
-        pagination={{
-          dynamicBullets: true,
-        }}
         className="project-slider"
+        style={{
+          overflowY: "visible"
+        }}
         >
           <SwiperSlide>
             <div className="project-card">
@@ -123,7 +133,10 @@ Worry no more! We've got you covered.</p>
             <img src={process.env.PUBLIC_URL + '/images/arrow-next.svg'} alt="hero" />
           </div>
         </div>
-        <div className="swiper-nav-scrollbar"></div>
+
+        <div className="swiper-scrollbar"
+        style={{bottom: -14, height: 6}}
+        ></div>
         </div>
     </section>
 

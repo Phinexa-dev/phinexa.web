@@ -40,9 +40,7 @@ hero-solutions .left p{
 
 section#animated-projects {
     background-image: url(../assets/backgrounds/background-4.svg);
-    // background-size: auto;
     background-size: auto 100%;
-    // height: 2226px;
     box-sizing: border-box;
     padding-bottom: 137px;
     margin-bottom: 0px;
@@ -63,7 +61,6 @@ section#animated-projects .header{
 }
 
 .project-card{
-    // width: 727px;
     text-align: left;
     position: relative;
     z-index: 0;
@@ -559,11 +556,9 @@ section#industries{
         display: none;
     }
 
-    // .swiper-button-disabled{
-    //     display:none;   
-    // }
-
-    // .swiper-scrollbar.swiper-scrollbar-horizontal{
-    //     display: block;
-    // }
+    .swiper-scrollbar {
+        position: relative;
+        background: #d6d6d6;
+        bottom: -10px;
+    }
 }

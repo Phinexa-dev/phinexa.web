@@ -2,60 +2,28 @@ import React, { useState, useEffect } from 'react'
 import './IterativeSDLC.scss';
 import { motion } from 'framer-motion'
 
-const circles = [
-    { x: 1233.5, y: 535.5 },
-    { x: 1340.5, y: 395.5 },
-    { x: 1340.5, y: 197.5 },
-    { x: 1233.5, y: 57.5 },
-    { x: 1059.5, y: 1.5 },
-    { x: 896.5, y: 57.5 },
-    { x: 780.5, y: 197.5 },
-    { x: 780.5, y: 395.5 },
-    { x: 896.5, y: 535.5 }
-];
-
-const circleContent = [
-    {
-        title: 'Analysis',
-        description: 'Assess infrastructure for bottlenecks, propose improvements.',
-    },
-    {
-        title: 'Report',
-        description: 'Evaluate DevOps, strengths, weaknesses, suggest optimizations.',
-    },
-    {
-        title: 'Recommendation',
-        description: 'Propose actionable steps for enhanced infrastructure, processes, collaboration.',
-    },
-    {
-        title: 'Collaboration',
-        description: 'Involve teams, prioritize open communication in decision-making.',
-    },
-    {
-        title: 'Implementation',
-        description: 'Collaborate on approved changes, tool setup, training for transition.',
-    },
-    {
-        title: 'Monitor & Measure',
-        description: 'Continuously track progress, provide updates, metrics, and insights.',
-    },
-    {
-        title: 'Success',
-        description: 'DevOps journey with Phinexa for accelerated delivery, collaboration, and continuous innovation.',
-    },
-    {
-        title: 'Support & Partnership',
-        description: 'Long-term commitment for ongoing support, maintenance, and optimization.',
-    },
-    {
-        title: 'Next iteration',
-        description: '',
-    }
-];
-  
-
 function IterativeSDLC() {
     const [count, setCount] = useState(0);
+    const [scrollDirection, setScrollDirection] = useState(1);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (currentScrollPos > prevScrollPos) {
+        setScrollDirection(1);
+      } else {
+        setScrollDirection(0);
+      }
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -100,17 +68,27 @@ function IterativeSDLC() {
 
     return (
         <>
-        <div className='sldc-mobile'>
+        <motion.div 
+        className='sldc-mobile'>
             {circleContent.map((circleItem, index) => (
-                <div className="sldc-iteration">
-                    <div className="index">
+                <motion.div 
+                initial= {scrollDirection ? {opacity: 0, y: "50%"} : {opacity: 0, y: "-50%"}}
+                whileInView={{
+                    opacity: 1, 
+                    y: "0%"
+                }}
+                transition={{ type: 'spring'}}
+                id={`sdlc-circle-${index}`} 
+                className="sldc-iteration">
+                    <div 
+                    className="index">
                         <p>{index+1}</p>
                     </div>
                     <p className="title">{circleItem.title}</p>
                     <p className="description">{circleItem.description}</p>
-                </div>
+                </motion.div>
             ))}
-        </div>
+        </motion.div>
         <div className='sldc'>
             <div className="container">
                 {circleContent.map((circleItem, index) => (
@@ -187,5 +165,57 @@ function IterativeSDLC() {
         </>
       );
 }
+
+
+const circles = [
+    { x: 1233.5, y: 535.5 },
+    { x: 1340.5, y: 395.5 },
+    { x: 1340.5, y: 197.5 },
+    { x: 1233.5, y: 57.5 },
+    { x: 1059.5, y: 1.5 },
+    { x: 896.5, y: 57.5 },
+    { x: 780.5, y: 197.5 },
+    { x: 780.5, y: 395.5 },
+    { x: 896.5, y: 535.5 }
+];
+
+const circleContent = [
+    {
+        title: 'Analysis',
+        description: 'Assess infrastructure for bottlenecks, propose improvements.',
+    },
+    {
+        title: 'Report',
+        description: 'Evaluate DevOps, strengths, weaknesses, suggest optimizations.',
+    },
+    {
+        title: 'Recommendation',
+        description: 'Propose actionable steps for enhanced infrastructure, processes, collaboration.',
+    },
+    {
+        title: 'Collaboration',
+        description: 'Involve teams, prioritize open communication in decision-making.',
+    },
+    {
+        title: 'Implementation',
+        description: 'Collaborate on approved changes, tool setup, training for transition.',
+    },
+    {
+        title: 'Monitor & Measure',
+        description: 'Continuously track progress, provide updates, metrics, and insights.',
+    },
+    {
+        title: 'Success',
+        description: 'DevOps journey with Phinexa for accelerated delivery, collaboration, and continuous innovation.',
+    },
+    {
+        title: 'Support & Partnership',
+        description: 'Long-term commitment for ongoing support, maintenance, and optimization.',
+    },
+    {
+        title: 'Next iteration',
+        description: '',
+    }
+];
 
 export default IterativeSDLC
