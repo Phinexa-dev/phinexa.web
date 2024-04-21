@@ -1,7 +1,4 @@
 @import '/src/Styles.scss';
-.hero.approach{
-    // min-height: 756px;
-}
 
 .hero.approach .left{
     width: 1400px;
@@ -118,10 +115,6 @@ section#benefits .paragraph{
 }
 
 @media screen and (max-width: 1652px) {
-    // .hero.approach{
-    //     // height: 55vh;
-    //     height: 500px
-    // }
 
     section#benefits .top .pros{
         width: 550px;
@@ -135,10 +128,6 @@ section#benefits .paragraph{
     section#benefits .top .pros .description,
     section#benefits .paragraph{
         font-size: 16px;
-    }
-
-    section#benefits .top .pros .images{
-        // align-items: flex-end;
     }
 
     section#benefits .top .pros .images .image {
@@ -180,7 +169,6 @@ section#benefits .paragraph{
 
 @media screen and (max-width: 1400px) {
     .hero.approach{
-        // height: 48vh;
         height: 550px;
     }
     section#benefits{
@@ -227,7 +215,6 @@ section#benefits .paragraph{
     .hero.approach{
         padding-left: 100px;
         padding-right: 100px;
-        // height: 40vh;
         height: 470px;
     }    
 
@@ -272,7 +259,6 @@ section#benefits .paragraph{
 
 @media screen and (max-width: 970px) {
     .hero.approach{
-        // height: 35vh;
         height: 400px;
     }
 
@@ -299,7 +285,6 @@ section#benefits .paragraph{
 
 @media screen and (max-width: 860px) {
     .hero.approach{
-        // height: 35vh;
         height: 380px;
     }    
 
