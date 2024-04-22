@@ -2,6 +2,7 @@
 header {
     position: fixed;
     background-color: white;
+    z-index: 1;
 }
 
 nav .background{
@@ -69,7 +70,6 @@ header nav ul{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 30px;
-    background: white;
 }
 
 header nav.open ul{
@@ -93,6 +93,10 @@ nav ul li a{
     width: 100%;
 }
 
+nav ul li a.active{
+    color: $secondary-color;
+}
+
 nav.open ul li:nth-child(1){transform: translate(260px, 30px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 nav.open ul li:nth-child(2){transform: translate(255px, 80px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 nav.open ul li:nth-child(3){transform: translate(240px, 130px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
@@ -112,7 +116,7 @@ nav:not(.open) ul li:nth-child(7) {transition-duration: 0.8s;}
 nav .right-logo{
     position: relative;
     margin-left: auto;
-    padding: 30px 50px;
+    padding: 40px 50px;
     background-color: white;
 }
 
@@ -122,4 +126,152 @@ nav .right-logo img {
 
 nav.open .background.layer-two {
     display: flex;
+}
+
+@media screen and  (max-width: 1400px) {
+    .logo {
+        padding-left: 27px;
+        padding-top: 40px;
+    }
+    
+    .logo img{
+        height: 70px;
+    }
+
+    nav .background{
+        width: 422px;
+        height: 422px;
+        left: -290px;
+        top: -210px;
+    }
+
+    header nav .background.layer-two{
+        width: 562px;
+        height: 562px;
+        left: -261px;
+        top: -320px;
+    }
+
+    nav.open ul li:nth-child(1){transform: translate(152px, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){transform: translate(140px, 30px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){transform: translate(127px, 60px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){transform: translate(110px, 88px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){transform: translate(90px, 115px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){transform: translate(60px, 140px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){transform: translate(25px, 165px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+}
+
+@media screen and (max-width: 684px) {
+    
+    nav.open ul{
+        background: white;
+        transition: background 0.2s ease-in;
+    }
+    
+    nav ul{
+        background: transparent;
+        transition: background 0.5s ease-out;
+        transition-delay: 0.2s;
+    }
+}
+
+@media screen and  (max-width: 500px) {
+    .logo {
+        padding-left: 27px;
+        padding-top: 40px;
+    }
+    
+    .logo img{
+        height: 25px;
+    }
+
+    nav .background{
+        display: none;
+        width: 422px;
+        height: 422px;
+        left: -290px;
+        top: -210px;
+    }
+
+    nav.open .background.layer-two {
+        display: none;
+    }
+    
+    nav .right-logo img{
+        width: 95px;
+    }
+
+    header nav ul{
+        width: 100vw;
+    }
+
+    header nav ul li{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    nav:not(.open) ul li {
+        transform: translate(205%, 0px);
+        transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    header nav ul{
+        
+    }
+
+    header nav.open ul{
+        margin-top: 0;
+        height: 100vh;
+        padding: 50px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header nav ul{
+        margin-top: 0;
+        padding: 50px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header nav ul li{
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    @keyframes adjustHeight {
+        from {
+            height: 100vh;
+        }
+        to {
+            height: 'auto';
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    header nav:not(.open) ul{
+        animation: adjustHeight 2s forwards;
+    }
+
+    nav.open ul li{
+        opacity: 1;
+        text-align: center;
+    }
+
+    nav ul li {
+        transform: translate(0, 0);
+    }
+
+    nav.open ul li:nth-child(1){left:50%; transform: translate(-50%, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){left:50%; transform: translate(-50%, 0px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){left:50%; transform: translate(-50%, 0px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){left:50%; transform: translate(-50%, 0px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){left:50%; transform: translate(-50%, 0px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){left:50%; transform: translate(-50%, 0px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){left:50%; transform: translate(-50%, 0px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 }

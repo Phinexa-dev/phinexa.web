@@ -5,11 +5,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 120px 0 120px;
+    overflow-x: hidden;
 }
 
 .animated-offering img{
     max-width: 550px;
     height: auto;
+    z-index: 0;
 }
 
 .animated-offering .content {
@@ -29,4 +31,88 @@
 .animated-offering .content .description {
     font-size: 18px;
     font-weight: $regular;
+}
+
+.animated-offering{
+    gap: 40px;
+}
+@media screen and  (max-width: 1572px) {
+    .animated-offering{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    section#animated-offerings{
+        height: 2000px;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and  (max-width: 1328px) {
+    .animated-offering .content .title{
+        font-size: 24px;
+    }
+    .animated-offering .content .description{
+        font-size: 16px;
+    }
+    .animated-offering img{
+        max-width: 400px;
+    }
+    section#animated-offerings{
+        height: 1600px;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .animated-offering img{
+        max-width: 350px;
+    }
+
+    section#animated-offerings{
+        height: 1400px;
+        background-size: cover;
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .animated-offering{
+        gap: 20px;
+    }
+    .animated-offering .content{
+        gap: 10px;
+    }
+    .animated-offering .content .title{
+        font-size: 16px;
+    }
+
+    .animated-offering .content .description{
+        font-size: 12px;
+    }
+
+    .animated-offering img{
+        max-width: 300px;
+    }
+
+    section#animated-offerings{
+        height: 1200px;
+        
+    }
+}
+
+@media screen and (max-width: 570px) {
+    section#animated-offerings{
+        height: 1450px;
+    }
+    .animated-offering{
+        flex-direction: column;
+    }
+    .animated-offering img{
+        max-width: 250px;
+    }
+
+    .animated-offering .content{
+        width: 100%;
+        order: 2;
+    }
 }

@@ -1,7 +1,47 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
+import { motion } from "framer-motion"
+
+const gridContainerVariant = {
+  hidden: {opacity: 0},
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25
+    }
+  }
+}
+
+const gridElementVariant = {
+  hidden: {opacity: 0, x: "-50px"},
+  show: {
+    opacity: 1, 
+    x: "0px",
+  }
+}
+
+const gridProjectElementVariant = {
+  hidden: {opacity: 0, y: "-50%"},
+  show: {
+    opacity: 1, 
+    y: "0%",
+  }
+}
+
+const formBoxVariant = {
+  hidden: {opacity: 0, y: "50%"},
+  show: {
+    opacity: 1, 
+    y: "0%",
+    transition: {
+      duration: 1,
+      type: "spring", 
+      bounce: 0.5
+    }
+  }
+}
 
 function Home() {
 
@@ -10,34 +50,60 @@ function Home() {
   const [project, setProject] = useState('discuss a software development project');
   const [email, setEmail] = useState('Your email');
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const handleContentChange = (setter, defaultValue, event) => {
     const content = event.target.textContent.trim();
+    console.log(content);
     setter(content === '' ? defaultValue : content);
   };
 
   return (
     <>
     <div className='hero'>
-        <div className="left">
+        <motion.div 
+        variants={{
+          hidden: {x: "-50%"},
+          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+        }}
+        initial="hidden"
+        whileInView="show"
+        className="left">
             <p>Simplifying</p>
             <p>IT Complexity</p>
-        </div>
-        <div className="right">
+        </motion.div>
+        <motion.div 
+        variants={{
+          hidden: {x: "50%"},
+          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+        }}
+        initial="hidden"
+        whileInView="show"
+        className="right">
             <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" />
-        </div>
+        </motion.div>
     </div>
 
     {/* What we offer section */}
     <section id='offerings'>
       <p className="section-header">What we offer</p>
-      <div className="grid">
+      <motion.div 
+      variants={gridContainerVariant}
+      initial="hidden"
+      whileInView="show"
+      className="grid">
         {offers.map((offer, index) => (
-          <div className="offer" key={index}>
+          <motion.div
+          variants={gridElementVariant}
+          className="offer" 
+          key={index}>
             <p className="title">{offer.title}</p>
             <p className="description">{offer.description}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <Button text="View Solutions" onClickRoute="/solutions"/>
     </section>
 
@@ -56,22 +122,32 @@ function Home() {
 
     <section id='projects'>
       <p className="section-header">Our Projects</p>
-      <div className="grid">
+      <motion.div 
+      variants={gridContainerVariant}
+      initial="hidden"
+      whileInView="show"
+      className="grid">
         {projects.map((project, index) => (
-          <div className="project"
+          <motion.div 
+          variants={gridProjectElementVariant}
+          className="project"
           style={{ backgroundImage: `url(${process.env.PUBLIC_URL + project.imagePath})` }}>
             <p className="title">{project.title}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
 
     <section id='quotation'>
       <p className="header">Reach out to us</p>
       <p className="header">for Visionary IT Solutions.</p>
       <Button text={"Contact"} rightIcon={<i class="fa fa-arrow-right"></i>
-}/>
-      <div className="form-box">
+} onClickRoute='/contact' />
+      <motion.div  
+      variants={formBoxVariant}
+      initial="hidden"
+      whileInView="show"
+      className="form-box">
         <div className="top">
           <p className="title">Request a Quote</p>
           <p className="description">Leave your details below and we will be in touch.</p>
@@ -114,10 +190,10 @@ function Home() {
           </form>
         </div>
         <div className="button-box">
-          <Button text={"Submit"} rightIcon={<i class="fa fa-paper-plane-o"></i>
+          <Button text={"Submit"} rightIcon={<i class="far fa-paper-plane"></i>
 }/>
         </div>
-      </div>
+      </motion.div>
     </section>
     </>
   )
