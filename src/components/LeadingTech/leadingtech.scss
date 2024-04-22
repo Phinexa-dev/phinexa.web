@@ -98,3 +98,41 @@ body {
 .right {
     transform: rotate(225deg);
 }
+@media only screen and (max-width: 768px) {
+
+    .section11 {
+    flex-direction: column; // Stack horizontally on smaller screens
+    margin-left: 0; // Remove the left margin
+    width: 100%; // Use full width
+}
+
+.service-list {
+    width: 100%; // Use the full width available
+}
+
+.tech-icons {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
+    width: 100%; // Use full width
+    margin-left: 0; // Align grid properly
+}
+
+
+
+    .tech-iconss {
+        width: 100%; // Make the tech icon section full width
+    }
+    .tech-icons {
+        padding: 0.5rem; // Reduce padding
+    }
+    .service-item {
+        font-size: 14px; // Reduce font size for better fit
+    }
+
+  .left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(315deg);
+}
+}
