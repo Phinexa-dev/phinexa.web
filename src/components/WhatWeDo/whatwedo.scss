@@ -1,0 +1,109 @@
+.section1{
+    width: 100%;
+    display: flex;
+    height: 40rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec1-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60mimrem;
+}
+
+.whatwedo{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+
+.atphinexa{
+    font-size: 3rem;
+    margin-top: -2.5rem;
+    margin-right: 8rem;
+}
+.desc{
+    margin-left: 5.2rem;
+    margin-top: 2rem;
+    width: 27rem;
+}
+
+
+.whatwedoimg{
+    height: 24rem;
+    width: 24rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .section1 {
+    flex-direction: column; // Stack the elements on smaller screens
+}
+
+.sec1-1 {
+    width: 80%; // Make the text container take more space
+}
+
+.whatwedo {
+    font-size: 3rem; // Reduce the font size for smaller screens
+}
+
+.atphinexa {
+    margin-top: 1rem; // Adjust the margin for better spacing
+    margin-right: 0; // Center the heading
+}
+
+.desc {
+    margin: 1rem auto; // Center the description and reduce the margin
+    width: 90%; // Make it wider to fit the screen
+}
+
+.whatwedoimg {
+    width: 80%; // Make the image take more space proportionally
+    height: auto; // Maintain aspect ratio
+}
+
+
+    .sec1-1 {
+        width: 95%; // Take almost full width
+    }
+    .whatwedo, .atphinexa {
+        font-size: 2rem; // Further reduce the font size
+    }
+    .desc {
+        width: 95%; // Use almost full width for text
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    .section11 {
+    flex-direction: column; // Stack horizontally on smaller screens
+    margin-left: 0; // Remove the left margin
+    width: 100%; // Use full width
+}
+
+.service-list {
+    width: 100%; // Use the full width available
+}
+
+.tech-icons {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
+    width: 100%; // Use full width
+    margin-left: 0; // Align grid properly
+}
+
+
+
+    .tech-iconss {
+        width: 100%; // Make the tech icon section full width
+    }
+    .tech-icons {
+        padding: 0.5rem; // Reduce padding
+    }
+    .service-item {
+        font-size: 14px; // Reduce font size for better fit
+    }
+}
