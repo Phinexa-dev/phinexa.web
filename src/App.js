@@ -11,7 +11,6 @@ import Approach from './routes/Approach';
 import Solution from './routes/Solutions';
 import Industries from './routes/Industries';
 
->>>>>>> main
 function App() {
   return (
     <div className="App">
