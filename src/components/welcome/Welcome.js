@@ -26,9 +26,9 @@ function Welcome() {
     }, []);
     return (
 
-        <div className="container">
-            <div className="main">
-                <div className="left">
+        <div className="container-wel">
+            <div className="main-wel">
+                <div className="left-wel">
                     <span>Hello,</span>
                     <span>welcome to Phinexa.</span>
                     <span>We specialize in transforming IT complexity into elegant simplicity.
@@ -38,7 +38,7 @@ function Welcome() {
                         effortlessly intuitive.</span>
 
                 </div>
-                <div className="right">
+                <div className="right-wel">
                     <img src={image} alt="" />
                 </div>
 

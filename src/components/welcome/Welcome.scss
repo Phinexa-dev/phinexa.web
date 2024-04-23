@@ -1,10 +1,10 @@
-.container {
+.container-wel {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 
-  .main {
+  .main-wel {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,7 +12,7 @@
     width: 100%;
     margin-top: 3rem;
 
-    .left {
+    .left-wel{
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -40,7 +40,7 @@
       }
     }
 
-    .right {
+    .right-wel {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
@@ -55,7 +55,7 @@
       flex-direction: column;
       align-items: center;
 
-      .left {
+      .left-wel {
         margin: 0;
         margin-left: 1rem;
         width: 100%;
@@ -77,7 +77,7 @@
         order: 1;
       }
 
-      .right {
+      .right-wel {
         width: 100%;
 
         img {
