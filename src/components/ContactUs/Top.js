@@ -1,5 +1,6 @@
 import image from "./Contactus.png"
 import './Top.scss'
+import '../../App.css'
 
 function ContactUs() {
     return (

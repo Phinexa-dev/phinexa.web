@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Welcome.scss'
+import '../../App.css'
 import gallery_1 from './gallery_1.png'
 import gallery_2 from './gallery_2.png'
 import gallery_3 from './gallery_3.png'

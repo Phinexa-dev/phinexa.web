@@ -58,7 +58,7 @@ function Careers() {
     ];
     return (
         <div className="container">
-            <div className="main">
+            <div className="main-c">
                 <div className="leftt">
                     <p>At the forefront</p>
                     <p>of technology, crafting solutions with purpose</p>

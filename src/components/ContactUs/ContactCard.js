@@ -1,4 +1,5 @@
 import './ContactCard.scss'
+import '../../App.css'
 
 function ContactCard() {
     return (

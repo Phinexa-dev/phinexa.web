@@ -105,7 +105,7 @@ function LeadingTech() {
     ],
     'Software Development': [
       { img: otherTechImg, alt: 'Other Tech' },
-      // Add more Software Development related icons
+
     ],
     'Blockchain and Cryptocurrency': [
   { img: BC1, alt: 'BC1' },
@@ -178,7 +178,6 @@ function LeadingTech() {
 
 
 
-    // Add other categories as needed
   };
 
 return(
