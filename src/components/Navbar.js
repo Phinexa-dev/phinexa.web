@@ -53,16 +53,22 @@ function Navbar() {
 
   return (
     <header>
-        <nav className={isOpen ? 'open' : ''}>
-          <div ref={ref} className="background layer-two"></div>
-          <div className="background"></div>
-          <div className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
+        <nav 
+        ref={ref}
+        className={isOpen ? 'open' : ''}>
+          <div
+          className="background layer-two"></div>
+          <div
+          className="background"></div>
+          <div 
+          className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
             <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="Logo" onClick={handleLogoClick}/>
           </div>
           <div className="mobile-logo">
             <img src={process.env.PUBLIC_URL + '/images/menu-' + (isOpen ? 'close' : 'open') + '.svg'} alt="logo-mobile" onClick={handleLogoClick} />
           </div>
-          <ul ref={ref} className={linkAnimation ? 'animate' : ''}>
+          <ul 
+          className={linkAnimation ? 'animate' : ''}>
             <li>
               <Link  to="/" onClick={closeMenu} className={activeLink === "" ? "active" : ""}>Home</Link>
             </li>
