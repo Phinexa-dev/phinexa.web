@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.scss';
 
@@ -8,12 +8,33 @@ function Navbar() {
   const [isScaled, setIsScaled] = useState(false);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState("");
+  const ref = useRef();
 
   useEffect(() => {
     const pathname = location.pathname;
     const lastSegment = pathname.substring(pathname.lastIndexOf("/") + 1);
     setActiveLink(lastSegment);
   }, [location.pathname]);
+
+  useEffect(() => {
+    // Function to handle click outside of the specified div
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        // Clicked outside of the div, update the state
+        setIsOpen(false);
+      }
+    }
+
+    // Attach event listeners for both mouse and touch events
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    
+    // Cleanup function to remove the event listeners
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [ref]);
 
   const handleLogoClick = () => {
     setIsOpen(!isOpen);
@@ -32,7 +53,9 @@ function Navbar() {
 
   return (
     <header>
-        <nav className={isOpen ? 'open' : ''}>
+        <nav
+        ref={ref}
+         className={isOpen ? 'open' : ''}>
           <div className="background layer-two"></div>
           <div className="background"></div>
           <div className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
