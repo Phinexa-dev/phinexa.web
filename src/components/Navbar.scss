@@ -128,6 +128,10 @@ nav.open .background.layer-two {
     display: flex;
 }
 
+.mobile-log{
+    display: none;
+}
+
 @media screen and  (max-width: 1400px) {
     .logo {
         padding-left: 27px;
@@ -179,10 +183,22 @@ nav.open .background.layer-two {
     .logo {
         padding-left: 27px;
         padding-top: 40px;
+        display: none;
     }
     
     .logo img{
         height: 25px;
+    }
+
+    .mobile-logo{
+        display: flex;
+        padding-left: 27px;
+        padding-top: 40px;
+        position: absolute;
+        height: 137px;
+        z-index: 22;
+        cursor: pointer;
+        align-items: flex-start;
     }
 
     nav .background{
@@ -215,10 +231,6 @@ nav.open .background.layer-two {
     nav:not(.open) ul li {
         transform: translate(205%, 0px);
         transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    header nav ul{
-        
     }
 
     header nav.open ul{
