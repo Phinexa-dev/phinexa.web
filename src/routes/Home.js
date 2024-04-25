@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Suspense} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
+import { Canvas } from '@react-three/fiber';
+import Cube from '../components/Rubik/Rubik';
+import { OrbitControls, Environment } from '@react-three/drei'
 
 const gridContainerVariant = {
   hidden: {opacity: 0},
@@ -81,8 +84,17 @@ function Home() {
         }}
         initial="hidden"
         whileInView="show"
-        className="right">
-            <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" />
+        className="right"
+        >
+          <Canvas camera={{ position: [3, 3, 3] }}>
+            <Suspense>
+              <Environment preset="forest" />
+            </Suspense>
+            <Cube />
+            <OrbitControls target={[0, 0, 0]} />
+            {/* <Stats /> */}
+          </Canvas>
+            {/* <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" /> */}
         </motion.div>
     </div>
 

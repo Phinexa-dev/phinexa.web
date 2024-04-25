@@ -256,6 +256,10 @@ header{
     border-right: 2px solid rgb(228, 228, 228);
 }
 
+div#leva__root{
+    display: none;
+}
+
 @media screen and  (max-width: 1720px) {
     .form-box .top{
         flex-direction: column;
