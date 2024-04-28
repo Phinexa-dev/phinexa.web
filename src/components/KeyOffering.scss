@@ -21,7 +21,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
-    width: 592px;
+    max-width: 592px;
     text-align: start;
 }
 
@@ -97,14 +97,14 @@
     }
 
     section#animated-offerings{
-        height: 1200px;
+        height: 1100px;
         
     }
 }
 
 @media screen and (max-width: 570px) {
     section#animated-offerings{
-        height: 1450px;
+        height: 1300px;
     }
     .animated-offering{
         flex-direction: column;
