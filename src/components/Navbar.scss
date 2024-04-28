@@ -7,25 +7,26 @@ header {
 
 nav .background{
     background-color: $accent-color;
-    width: 722px;
-    height: 722px;
     position: absolute;
-    left: -480px;
-    top: -330px;
     border-radius: 50%;
     z-index: 2;
+    width: 422px;
+    height: 422px;
+    left: -290px;
+    top: -210px;
 }
 
 .logo{
     position: absolute;
-    padding-left: 45px;
-    padding-top: 60px;
+    padding-left: 27px;
+    padding-top: 40px;
     height: 137px;
     z-index: 2;
     cursor: pointer;
 }
 .logo img {
     transition: transform 0.25s ease;
+    height: 70px;
 }
 
 .logo.scaled img {
@@ -54,14 +55,14 @@ header nav{
 header nav .background.layer-two{
     display: none;
     background-color: white;
-    width: 822px;
-    height: 822px;
     position: absolute;
-    left: -400px;
-    top: -400px;
     border-radius: 50%;
     z-index: 1;
-    transition: all 12s cubic-bezier(0.68, -0.55, 0.265, 1.55);;
+    transition: all 12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 562px;
+    height: 562px;
+    left: -261px;
+    top: -320px;
 }
 
 header nav ul{
@@ -97,13 +98,21 @@ nav ul li a.active{
     color: $secondary-color;
 }
 
-nav.open ul li:nth-child(1){transform: translate(260px, 30px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(2){transform: translate(255px, 80px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(3){transform: translate(240px, 130px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(4){transform: translate(218px, 180px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(5){transform: translate(186px, 230px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(6){transform: translate(130px, 280px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-nav.open ul li:nth-child(7){transform: translate(40px, 330px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(1){transform: translate(260px, 30px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(2){transform: translate(255px, 80px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(3){transform: translate(240px, 130px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(4){transform: translate(218px, 180px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(5){transform: translate(186px, 230px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(6){transform: translate(130px, 280px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+// nav.open ul li:nth-child(7){transform: translate(40px, 330px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+nav.open ul li:nth-child(1){transform: translate(152px, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){transform: translate(140px, 30px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){transform: translate(127px, 60px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){transform: translate(110px, 88px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){transform: translate(90px, 115px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){transform: translate(60px, 140px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){transform: translate(25px, 165px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 
 nav:not(.open) ul li:nth-child(1) {transition-duration: 0.2s;}
 nav:not(.open) ul li:nth-child(2) {transition-duration: 0.3s;}
@@ -126,6 +135,10 @@ nav .right-logo img {
 
 nav.open .background.layer-two {
     display: flex;
+}
+
+.mobile-log{
+    display: none;
 }
 
 @media screen and  (max-width: 1400px) {
@@ -151,14 +164,6 @@ nav.open .background.layer-two {
         left: -261px;
         top: -320px;
     }
-
-    nav.open ul li:nth-child(1){transform: translate(152px, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(2){transform: translate(140px, 30px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(3){transform: translate(127px, 60px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(4){transform: translate(110px, 88px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(5){transform: translate(90px, 115px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(6){transform: translate(60px, 140px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    nav.open ul li:nth-child(7){transform: translate(25px, 165px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
 }
 
 @media screen and (max-width: 684px) {
@@ -179,11 +184,22 @@ nav.open .background.layer-two {
     .logo {
         padding-left: 27px;
         padding-top: 40px;
-        padding-top: 40px;
+        display: none;
     }
     
     .logo img{
         height: 25px;
+    }
+
+    .mobile-logo{
+        display: flex;
+        padding-left: 27px;
+        padding-top: 40px;
+        position: absolute;
+        height: 137px;
+        z-index: 22;
+        cursor: pointer;
+        align-items: flex-start;
     }
 
     nav .background{
@@ -216,10 +232,6 @@ nav.open .background.layer-two {
     nav:not(.open) ul li {
         transform: translate(205%, 0px);
         transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-
-    header nav ul{
-        
     }
 
     header nav.open ul{

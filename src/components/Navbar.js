@@ -53,15 +53,22 @@ function Navbar() {
 
   return (
     <header>
-        <nav
+        <nav 
         ref={ref}
-         className={isOpen ? 'open' : ''}>
-          <div className="background layer-two"></div>
-          <div className="background"></div>
-          <div className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
+        className={isOpen ? 'open' : ''}>
+          <div
+          className="background layer-two"></div>
+          <div
+          className="background"></div>
+          <div 
+          className={`logo ${isScaled ? 'scaled' : ''}`} onClick={handleLogoClick}>
             <img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="Logo" onClick={handleLogoClick}/>
           </div>
-          <ul className={linkAnimation ? 'animate' : ''}>
+          <div className="mobile-logo">
+            <img src={process.env.PUBLIC_URL + '/images/menu-' + (isOpen ? 'close' : 'open') + '.svg'} alt="logo-mobile" onClick={handleLogoClick} />
+          </div>
+          <ul 
+          className={linkAnimation ? 'animate' : ''}>
             <li>
               <Link  to="/" onClick={closeMenu} className={activeLink === "" ? "active" : ""}>Home</Link>
             </li>
@@ -86,7 +93,9 @@ function Navbar() {
           </ul>
 
           <div className="right-logo">
-            <img src={process.env.PUBLIC_URL + '/images/logo-full.svg'} alt="Logo"/>
+            <Link to="/about">
+              <img src={process.env.PUBLIC_URL + '/images/logo-full.svg'} alt="Logo"/>
+            </Link>
           </div>
         </nav>
     </header>
