@@ -12,8 +12,9 @@ section.industries .grid .offer{
 }
 
 section.industries .grid .offer:last-child{
-    align-self: center;
-    margin-left: auto;
+    // align-self: center;
+    // margin-left: auto;
+    // grid-column: span 3;
 }
 
 section.industries .grid .offer img{

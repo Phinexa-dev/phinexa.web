@@ -101,6 +101,9 @@ section#industries{
 .swiper{
     z-index: 0 !important;
 }
+.swiper-scrollbar{
+    display: none;
+}
 
 .swiper-nav-btns{
     width: 100%;
@@ -216,6 +219,26 @@ section#industries{
 
 .project-card .content-img.mobile{
     display: none;
+}
+
+section#blank p{
+    text-align: center;
+}
+
+.project-card .image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.project-card .image img{
+    height: auto;
+    width: 250px;
+    height: 250px;
 }
 
 
@@ -358,7 +381,7 @@ section#industries{
     }
 
     .swiper-nav-btns{
-        bottom: 300px;
+        bottom: 230px;
     }
 }
 
@@ -505,6 +528,9 @@ section#industries{
 }
 
 @media screen and (max-width: 500px) {
+    .swiper-scrollbar{
+        display: block;
+    }
     .hero-solutions{
         padding-left: 30px;
         padding-right: 30px;

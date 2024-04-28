@@ -24,6 +24,7 @@ function Industries() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="right">
             <img src={process.env.PUBLIC_URL + '/images/industries-hero.svg'} alt="hero" />
         </motion.div>
@@ -41,6 +42,7 @@ function Industries() {
             opacity: 1, 
             y: "0%"
           }}
+          viewport={{ once: true }}
           transition={{ type: 'spring'}}
           className="offer" 
           key={index}>
