@@ -101,6 +101,9 @@ section#industries{
 .swiper{
     z-index: 0 !important;
 }
+.swiper-scrollbar{
+    display: none;
+}
 
 .swiper-nav-btns{
     width: 100%;
@@ -505,6 +508,9 @@ section#industries{
 }
 
 @media screen and (max-width: 500px) {
+    .swiper-scrollbar{
+        display: block;
+    }
     .hero-solutions{
         padding-left: 30px;
         padding-right: 30px;

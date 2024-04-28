@@ -148,6 +148,8 @@ line.line.active{
 .sldc .buttons i{
     font-size: 35px;
     color: $primary-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1652px) {

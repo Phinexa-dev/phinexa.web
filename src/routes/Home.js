@@ -243,19 +243,19 @@ const keyOffers = [
     imagePath: "/images/software-development.svg",
     title: "Software Development",
     description: "From strategic IT solutions to language support, we are your one-stop destination for excellence.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   },
   {
     imagePath: "/images/cyber-security.svg",
     title: "Cyber Security",
     description: "We provide cutting-edge solutions that empower businesses to thrive in the digital age securely.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   },
   {
     imagePath: "/images/devops-as-a-service.svg",
     title: "DevOps as a Service",
     description: "For strategic IT solutions or language support, we're your comprehensive hub for optimizing operations.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   }
 ]
 

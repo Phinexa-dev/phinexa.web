@@ -6,6 +6,18 @@ function IterativeSDLC() {
     const [count, setCount] = useState(0);
     const [scrollDirection, setScrollDirection] = useState(1);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [rightArrowPosition, setRightArrowPosition] = useState(0);
+  const [leftArrowPosition, setLeftArrowPosition] = useState(0);
+
+  const handleRightArrowClick = () => {
+    setRightArrowPosition(-12); // Move right arrow to the right by 12 pixels
+    setTimeout(() => setRightArrowPosition(0), 300); // Reset right arrow position after 300ms
+  };
+
+  const handleLeftArrowClick = () => {
+    setLeftArrowPosition(-12); // Move left arrow to the left by 12 pixels
+    setTimeout(() => setLeftArrowPosition(0), 300); // Reset left arrow position after 300ms
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +41,11 @@ function IterativeSDLC() {
         const handleKeyDown = (event) => {
           if (event.key === 'ArrowRight') {
             event.preventDefault();
+            handleRightArrowClick();
             setCount((prevCount) => (prevCount + 1) % 9);
-          } else if (event.key === 'ArrowLeft') {
+        } else if (event.key === 'ArrowLeft') {
             event.preventDefault();
+            handleLeftArrowClick();
             setCount((prevCount) => (prevCount + 9 -1) % 9);
           }
         };
@@ -122,8 +136,17 @@ function IterativeSDLC() {
                         }}
                         initial="stay"
                         onKeyDown="move"
-                         class="fa fa-chevron-left" aria-hidden="true"></motion.i>
-                        <motion.i class="fa fa-chevron-right" aria-hidden="true"></motion.i>
+                        class="fa fa-chevron-left" 
+                        aria-hidden="true"
+                        style={{ marginLeft: `${leftArrowPosition}px` }}
+                        onClick={() => setCount((prevCount) => (prevCount + 9 -1) % 9)}
+                        ></motion.i>
+                        <motion.i 
+                        class="fa fa-chevron-right" 
+                        aria-hidden="true"
+                        style={{ marginRight: `${rightArrowPosition}px` }}
+                        onClick={() => setCount(prevCount => (prevCount + 1) % 9)}
+                        ></motion.i>
                     </div>
                 </div>
             </div>
