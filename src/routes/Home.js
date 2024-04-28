@@ -73,6 +73,7 @@ function Home() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="left">
             <p>Simplifying</p>
             <p>IT Complexity</p>
@@ -84,6 +85,7 @@ function Home() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="right"
         >
           <Canvas camera={{ position: [3, 3, 3] }}>
@@ -105,6 +107,7 @@ function Home() {
       variants={gridContainerVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="grid">
         {offers.map((offer, index) => (
           <motion.div
@@ -132,12 +135,13 @@ function Home() {
         </ul>
     </section>
 
-    <section id='projects'>
+    {/* <section id='projects'>
       <p className="section-header">Our Projects</p>
       <motion.div 
       variants={gridContainerVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="grid">
         {projects.map((project, index) => (
           <motion.div 
@@ -148,7 +152,7 @@ function Home() {
           </motion.div>
         ))}
       </motion.div>
-    </section>
+    </section> */}
 
     <section id='quotation'>
       <p className="header">Reach out to us</p>
@@ -159,6 +163,7 @@ function Home() {
       variants={formBoxVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="form-box">
         <div className="top">
           <p className="title">Request a Quote</p>

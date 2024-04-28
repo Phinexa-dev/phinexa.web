@@ -9,6 +9,7 @@ function KeyOffering({index, imagePath, title, description, route}) {
             <motion.div 
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             className="animated-offering">
                 <motion.div 
                 variants={{
@@ -38,6 +39,7 @@ function KeyOffering({index, imagePath, title, description, route}) {
             }}
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             src={process.env.PUBLIC_URL + imagePath} alt="" />
             <motion.div 
             variants={{
@@ -46,6 +48,7 @@ function KeyOffering({index, imagePath, title, description, route}) {
             }}
             initial="hidden"
             whileInView="show"
+            viewport={{ once: true }}
             className="content">
                 <p className="title">{title}</p>
                 <p className="description">{description}</p>

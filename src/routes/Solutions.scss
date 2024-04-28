@@ -221,6 +221,26 @@ section#industries{
     display: none;
 }
 
+section#blank p{
+    text-align: center;
+}
+
+.project-card .image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.project-card .image img{
+    height: auto;
+    width: 250px;
+    height: 250px;
+}
+
 
 @keyframes drawLine {
     to {
@@ -361,7 +381,7 @@ section#industries{
     }
 
     .swiper-nav-btns{
-        bottom: 300px;
+        bottom: 230px;
     }
 }
 
