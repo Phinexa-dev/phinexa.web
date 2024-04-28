@@ -94,15 +94,42 @@ function Welcome() {
             <div className="team">
                 <p>Meet Our Team</p>
                 <div className="team-gallery">
-                    <div className="team-row-1">
-                        <img src={person1} alt="" />
-                        <img src={person2} alt="" />
-                    </div>
-                    <div className="team-row-2">
-                        <img src={person3} alt="" />
-                        <img src={person4} alt="" />
-                    </div>
-                </div>
+  <div className="team-row">
+    <div className="person-det">
+      <img src={person1} alt="Mike Cannon-Brookes" />
+      <p className="p-name">Mike Cannon-Brookes</p>
+      <p className="p-desig">CO-FOUNDER & CO-CEO</p>
+    </div>
+    <div className="person-det">
+      <img src={person2} alt="Scott Farquhar" />
+      <p className="p-name">Scott Farquhar</p>
+      <p className="p-desig">CO-FOUNDER & CO-CEO</p>
+    </div>
+    <div className="person-det">
+      <img src={person3} alt="Sri Viswanath" />
+      <p className="p-name">Sri Viswanath</p>
+      <p className="p-desig">CHIEF TECHNOLOGY OFFICER</p>
+    </div>
+  </div>
+  <div className="team-row">
+    <div className="person-det">
+      <img src={person4} alt="Anu Bharadwaj" />
+      <p className="p-name">Anu Bharadwaj</p>
+      <p className="p-desig">HEAD OF ENTERPRISE & CLOUD PLATFORM</p>
+    </div>
+    <div className="person-det">
+      <img src={person3} alt="Erika Fisher" />
+      <p className="p-name">Erika Fisher</p>
+      <p className="p-desig">CHIEF ADMINISTRATIVE OFFICER & GENERAL COUNSEL</p>
+    </div>
+    <div className="person-det">
+      <img src={person3} alt="James Beer" />
+      <p className="p-name">James Beer</p>
+      <p className="p-desig">CHIEF FINANCIAL OFFICER</p>
+    </div>
+  </div>
+</div>
+
 
             </div>
         </div>

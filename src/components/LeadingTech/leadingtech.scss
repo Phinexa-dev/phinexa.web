@@ -98,7 +98,7 @@ body {
 .right {
     transform: rotate(225deg);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1500px) {
 
     .section11 {
     flex-direction: column; // Stack horizontally on smaller screens
@@ -107,12 +107,14 @@ body {
 }
 
 .service-list {
-    width: 100%; // Use the full width available
+  margin-top: 5rem;
+
+    width: 95%; // Use the full width available
 }
 
 .tech-icons {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
-    width: 100%; // Use full width
+    width: 95%; // Use full width
     margin-left: 0; // Align grid properly
 }
 

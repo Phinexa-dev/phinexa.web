@@ -42,23 +42,29 @@
     width: 24rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
 
-    .section1 {
+    .section1-wwd {
     flex-direction: column; // Stack the elements on smaller screens
+
+        justify-content: center;
 }
 
 .sec1-1 {
+    align-items: center;
     width: 80%; // Make the text container take more space
 }
 
 .whatwedo {
+        margin-top: 10rem; // Adjust the margin for better spacing
+
     font-size: 3rem; // Reduce the font size for smaller screens
 }
 
 .atphinexa {
     margin-top: 1rem; // Adjust the margin for better spacing
     margin-right: 0; // Center the heading
+    font-size: 2rem;
 }
 
 .desc {
@@ -67,18 +73,14 @@
 }
 
 .whatwedoimg {
-    width: 80%; // Make the image take more space proportionally
+    width: 50%; // Make the image take more space proportionally
     height: auto; // Maintain aspect ratio
 }
 
+@media only screen and (max-width: 555px) {
+    .whatwedo {
+        margin-top: 5rem; // Adjust the margin for better spacing
+    }
+}
 
-    .sec1-1 {
-        width: 95%; // Take almost full width
-    }
-    .whatwedo, .atphinexa {
-        font-size: 2rem; // Further reduce the font size
-    }
-    .desc {
-        width: 95%; // Use almost full width for text
-    }
 }
