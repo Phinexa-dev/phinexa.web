@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    // padding: 20px;
+
+}
+
+.section11{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  margin-left: 12rem;
+    background-color: #ffffff;
+}
+.tech-icons{
+    background-color: red;
+    width: 70%;
+    height: 30rem;
+}
+
+.service-list {
+    list-style: none;
+  width: 19rem;
+      background-color: #5b5b5b;
+    padding: 0;
+    margin: 0;
+}
+
+.service-item {
+    background-color: #fff;
+    margin-bottom: 2px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+.tech-iconss{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+
+}
+
+.tech-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust '100px' to your preference */
+  grid-gap: 1rem; /* This sets the gap between the icons */
+  align-items: center;
+  justify-items: center;
+  margin-left: -9rem;
+  background-color: #fff; /* Assuming the background is white */
+  padding: 1rem; /* Add some padding around the icons */
+  width: 800px; /* Adjust the width as needed */
+  height: auto; /* Or set a fixed height if necessary */
+}
+
+.tech-icon {
+  /* You can style individual icon containers if needed */
+}
+
+.tech-icon img {
+  max-width: 100%; /* Makes sure the image does not overflow its container */
+  height: auto; /* Keep the aspect ratio */
+}
+
+
+.service-item a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.chevron {
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    vertical-align: middle;
+    width: 10px;
+  margin-right: -15px;
+    margin-left: 10px;
+}
+
+.left {
+    transform: rotate(45deg);
+}
+
+.right {
+    transform: rotate(225deg);
+}
+@media only screen and (max-width: 768px) {
+
+    .section11 {
+    flex-direction: column; // Stack horizontally on smaller screens
+    margin-left: 0; // Remove the left margin
+    width: 100%; // Use full width
+}
+
+.service-list {
+    width: 100%; // Use the full width available
+}
+
+.tech-icons {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
+    width: 100%; // Use full width
+    margin-left: 0; // Align grid properly
+}
+
+
+
+    .tech-iconss {
+        width: 100%; // Make the tech icon section full width
+    }
+    .tech-icons {
+        padding: 0.5rem; // Reduce padding
+    }
+    .service-item {
+        font-size: 14px; // Reduce font size for better fit
+    }
+
+  .left {
+    transform: rotate(135deg);
+}
+
+.right {
+    transform: rotate(315deg);
+}
+}

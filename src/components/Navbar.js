@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.scss';
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(window.innerWidth > 500);
   const [linkAnimation, setLinkAnimation] = useState(false);
   const [isScaled, setIsScaled] = useState(false);
   const location = useLocation();
@@ -25,14 +25,25 @@ function Navbar() {
       }
     }
 
+    const handleScroll = () => {
+      // Check if the page has been scrolled, for example, if the vertical scroll position is greater than 100 pixels
+      if (window.scrollY > 100) {
+        setIsOpen(false); // Update state to true
+      } else if (window.innerWidth > 500) {
+        setIsOpen(true); // Update state to false
+      }
+    };
+
     // Attach event listeners for both mouse and touch events
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("touchstart", handleClickOutside);
+    window.addEventListener('scroll', handleScroll);
     
     // Cleanup function to remove the event listeners
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [ref]);
 
@@ -70,30 +81,32 @@ function Navbar() {
           <ul 
           className={linkAnimation ? 'animate' : ''}>
             <li>
-              <Link  to="/" onClick={closeMenu} className={activeLink === "" ? "active" : ""}>Home</Link>
+              <Link  to="/" className={activeLink === "" ? "active" : ""}>Home</Link>
             </li>
             <li>
-              <Link to="/solutions"  onClick={closeMenu} className={activeLink === "solutions" ? "active" : ""}>Solutions</Link>
+              <Link to="/solutions"  className={activeLink === "solutions" ? "active" : ""}>Solutions</Link>
             </li>
             <li>
-              <Link to="/what-we-do" onClick={closeMenu} className={activeLink === "what-we-do" ? "active" : ""}>What We do</Link>
+              <Link to="/what-we-do"className={activeLink === "what-we-do" ? "active" : ""}>What We do</Link>
             </li>
             <li>
-              <Link to="/our-approach" onClick={closeMenu} className={activeLink === "our-approach" ? "active" : ""}>Our Approach</Link>
+              <Link to="/our-approach" className={activeLink === "our-approach" ? "active" : ""}>Our Approach</Link>
             </li>
             <li>
-              <Link to="/industries" onClick={closeMenu} className={activeLink === "industries" ? "active" : ""}>Industries</Link>
+              <Link to="/industries" className={activeLink === "industries" ? "active" : ""}>Industries</Link>
             </li>
             <li>
-              <Link to="/about" onClick={closeMenu} className={activeLink === "about" ? "active" : ""}>About</Link>
+              <Link to="/about" className={activeLink === "about" ? "active" : ""}>About</Link>
             </li>
             <li>
-              <Link to="/contact" onClick={closeMenu} className={activeLink === "contact" ? "active" : ""}>Contact</Link>
+              <Link to="/contact" className={activeLink === "contact" ? "active" : ""}>Contact</Link>
             </li>
           </ul>
 
           <div className="right-logo">
-            <img src={process.env.PUBLIC_URL + '/images/logo-full.svg'} alt="Logo"/>
+            <Link to="/about">
+              <img src={process.env.PUBLIC_URL + '/images/logo-full.svg'} alt="Logo"/>
+            </Link>
           </div>
         </nav>
     </header>

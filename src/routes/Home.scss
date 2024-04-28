@@ -89,6 +89,9 @@ section {
     padding: 100px 192px 0 192px;
     margin-bottom: 100px;
 }
+section#offerings{
+    margin-bottom: 50px;
+}
 
 .section-header {
     text-align: left;
@@ -100,16 +103,22 @@ section {
 section#animated-offerings {
     background-image: url(../assets/backgrounds/background-1.svg);
     background-size: auto;
-    height: 2155.69px;
+    height: 1350px;
     box-sizing: border-box;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
+    background-size: cover; /* Fit the background image within the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 section#animated-offerings ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    // justify-content: space-between;
+    // height: 100%;
 }
 
 section#animated-offerings ul li {
@@ -254,6 +263,10 @@ body,
 header{
     border-left: 2px solid rgb(228, 228, 228);
     border-right: 2px solid rgb(228, 228, 228);
+}
+
+div#leva__root{
+    display: none;
 }
 
 @media screen and  (max-width: 1720px) {

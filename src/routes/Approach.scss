@@ -68,9 +68,14 @@ section .section-title{
     gap: 48px;
 }
 
-.client-benefits .grid .img img{
-    width: 100%;
+.client-benefits .grid .img{
+    overflow: visible;
+}
+
+.client-benefits .grid .img svg{
+    width: 70%;
     height: auto;
+    overflow: visible;
 }
 
 .benefit{

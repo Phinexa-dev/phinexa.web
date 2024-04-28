@@ -36,6 +36,7 @@ function Approach() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="left">
             <p>Our Approach</p>
             <p>and Collaboration Process</p>
@@ -47,6 +48,7 @@ function Approach() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="right">
             <img src={process.env.PUBLIC_URL + '/images/approach-hero.svg'} alt="hero" />
         </motion.div>
@@ -98,6 +100,7 @@ increased efficiency</p>
         variants={gridContainerVariant}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="grid">
             <motion.div variants={gridElementVariant} className="benefit">
                 <p className="title">Efficient Communication</p>
@@ -116,7 +119,57 @@ increased efficiency</p>
                 <p className="description">Strict adherence to timelines for project delivery.</p>
             </motion.div>
             <motion.div variants={gridElementVariant} className="img">
-                <img src={process.env.PUBLIC_URL + '/images/symbol-1.svg'} alt="" />
+            <svg width="331" height="197" viewBox="0 0 331 197" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <motion.path 
+                animate={["initial"]}
+                whileHover={["grow"]}
+                variants={{
+                  grow: {
+                    scale: 1.1
+                  },
+                  rotate: {
+                    rotate: [null, -5, 5, 0],
+                    transition: {
+                      duration: 10
+                    }
+                  },
+                  initial: {
+                    y: [-40, 40],
+                    x: [40, -40],
+                    rotate: 0,
+                    transition: {
+                      delay: 0.2,
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    }
+                  }
+                }}
+                d="M16.6404 50.3496L110.038 2.13621L203.435 50.3496V146.423L110.038 194.637L16.6404 146.423V50.3496Z" stroke="#005F6A" stroke-width="3.79641"/>
+                <motion.path 
+                animate={["initial"]}
+                variants={{
+                  rotate: {
+                    rotate: [null, -5, 5, 0],
+                    transition: {
+                      duration: 10
+                    }
+                  },
+                  initial: {
+                    y: [-40, 40],
+                    x: [-40, 40],
+                    rotate: 0,
+                    transition: {
+                      delay: 1,
+                      duration: 2,
+                      repeat: Infinity,
+                      repeatType: "reverse"
+                    }
+                  }
+                }}
+                d="M126.734 50.3496L220.131 2.13621L313.528 50.3496V146.423L220.131 194.637L126.734 146.423V50.3496Z" stroke="#E6A134" stroke-width="3.79641"/>
+            </svg>
+                {/* <img src={process.env.PUBLIC_URL + '/images/symbol-1.svg'} alt="" /> */}
             </motion.div>
             <motion.div variants={gridElementVariant} className="benefit">
                 <p className="title">Tailored Solutions</p>

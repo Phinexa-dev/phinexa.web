@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, Suspense} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
+import { Canvas } from '@react-three/fiber';
+import Cube from '../components/Rubik/Rubik';
+import { OrbitControls, Environment } from '@react-three/drei'
 
 const gridContainerVariant = {
   hidden: {opacity: 0},
@@ -70,6 +73,7 @@ function Home() {
         }}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
         className="left">
             <p>Simplifying</p>
             <p>IT Complexity</p>
@@ -81,8 +85,18 @@ function Home() {
         }}
         initial="hidden"
         whileInView="show"
-        className="right">
-            <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" />
+        viewport={{ once: true }}
+        className="right"
+        >
+          <Canvas camera={{ position: [3, 3, 3] }}>
+            <Suspense>
+              <Environment preset="forest" />
+            </Suspense>
+            <Cube />
+            <OrbitControls target={[0, 0, 0]} />
+            {/* <Stats /> */}
+          </Canvas>
+            {/* <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" /> */}
         </motion.div>
     </div>
 
@@ -93,6 +107,7 @@ function Home() {
       variants={gridContainerVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="grid">
         {offers.map((offer, index) => (
           <motion.div
@@ -120,12 +135,13 @@ function Home() {
         </ul>
     </section>
 
-    <section id='projects'>
+    {/* <section id='projects'>
       <p className="section-header">Our Projects</p>
       <motion.div 
       variants={gridContainerVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="grid">
         {projects.map((project, index) => (
           <motion.div 
@@ -136,7 +152,7 @@ function Home() {
           </motion.div>
         ))}
       </motion.div>
-    </section>
+    </section> */}
 
     <section id='quotation'>
       <p className="header">Reach out to us</p>
@@ -147,6 +163,7 @@ function Home() {
       variants={formBoxVariant}
       initial="hidden"
       whileInView="show"
+      viewport={{ once: true }}
       className="form-box">
         <div className="top">
           <p className="title">Request a Quote</p>
@@ -231,19 +248,19 @@ const keyOffers = [
     imagePath: "/images/software-development.svg",
     title: "Software Development",
     description: "From strategic IT solutions to language support, we are your one-stop destination for excellence.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   },
   {
     imagePath: "/images/cyber-security.svg",
     title: "Cyber Security",
     description: "We provide cutting-edge solutions that empower businesses to thrive in the digital age securely.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   },
   {
     imagePath: "/images/devops-as-a-service.svg",
     title: "DevOps as a Service",
     description: "For strategic IT solutions or language support, we're your comprehensive hub for optimizing operations.",
-    route: "/solutions/software-development"
+    route: "/solutions"
   }
 ]
 
