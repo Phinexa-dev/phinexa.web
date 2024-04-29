@@ -187,37 +187,37 @@ return(
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('DevOps')}>
             DevOps as a Service (DaaS)
-            <span className={selectedCategory === 'DevOps' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'DevOps' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Blockchain and Cryptocurrency')}>
             Blockchain and Cryptocurrency
-            <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Data Analysis')}>
             Data Analysis
-            <span className={selectedCategory === 'Data Analysis' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Data Analysis' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Cyber Security')}>
             Cyber Security
-            <span className={selectedCategory === 'Cyber Security' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Cyber Security' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('IoT')}>
             IoT
-            <span className={selectedCategory === 'IoT' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'IoT' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Web and Mobile')}>
             Web and Mobile
-            <span className={selectedCategory === 'Web and Mobile' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Web and Mobile' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
       </ul>
