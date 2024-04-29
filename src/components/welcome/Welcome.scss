@@ -249,59 +249,68 @@
   color: #005f6a;
   font-weight: bold;
 
-  .team-gallery {
-    margin: 1rem 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  .p-name{
+    font-size: 1.2rem;
+      color: #000000;
 
-    .team-row-1 {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 50%;
-    }
-
-    .team-row-2 {
-      width: 50%;
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: space-between;
-
-      img:nth-child(2) {
-        margin-right: 13%;
-      }
-
-
-    }
-
-    img {
-      width: 40%;
-    }
   }
 
-  @media (max-width: 768px) {
-    .team-gallery {
-      .team-row-1,
-      .team-row-2 {
-        width: 100%;
-      }
-
-      flex-direction: column;
-      align-items: center;
-
-      img:nth-child(2) {
-        margin-right: 13%;
-      }
-
-      img {
-        width: 50%;
-        margin: 0.5rem;
-      }
-    }
+  .p-desig{
+    font-size: 0.6rem;
+      color: #000000;
   }
+.team-gallery {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.person-det {
+  width: 22%; /* Adjust based on your design requirements */
+  text-align: center; /* Center the text under the image */
+}
+
+.person-det img {
+  max-width: 100%;
+  height: auto; /* Keep the aspect ratio */
+  display: block; /* To enable margin auto to work */
+  margin: 0 auto; /* Center the image */
+}
+
+.p-name {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.p-desig {
+  color: gray;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .team-gallery{
+    flex-direction: column;
+  }
+  .team-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person-det {
+    width: 80%; /* Adjust to fit the mobile view */
+    margin-bottom: 1rem; /* Add some space between the profiles */
+  }
+}
+
 }
 
 

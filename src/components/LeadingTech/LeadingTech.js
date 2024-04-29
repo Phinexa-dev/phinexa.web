@@ -1,32 +1,33 @@
 import React,{ useState }  from 'react';
 import './leadingtech.scss';
-import D1 from "../../assets/images/devops-tech-icons/d1.svg.png"
+import D1 from "../../assets/images/devops-tech-icons/d1.png"
 import D2 from "../../assets/images/devops-tech-icons/d2.png";
-import D3 from "../../assets/images/devops-tech-icons/d3.svg";
+import D3 from "../../assets/images/devops-tech-icons/d3.png";
 import D4 from "../../assets/images/devops-tech-icons/d4.png";
 import D5 from "../../assets/images/devops-tech-icons/d5.png";
 import D6 from "../../assets/images/devops-tech-icons/d6.png";
 import D7 from "../../assets/images/devops-tech-icons/d7.png";
-import D8 from "../../assets/images/devops-tech-icons/d8.jpg";
+import D8 from "../../assets/images/devops-tech-icons/d8.png";
 import D9 from "../../assets/images/devops-tech-icons/d9.png";
 import D10 from "../../assets/images/devops-tech-icons/d10.png";
-import D11 from "../../assets/images/devops-tech-icons/d11.svg.png";
+import D11 from "../../assets/images/devops-tech-icons/d11.png";
 import D12 from "../../assets/images/devops-tech-icons/d12.png";
-import D13 from "../../assets/images/devops-tech-icons/d13.svg.png";
+import D13 from "../../assets/images/devops-tech-icons/d13.png";
 import D14 from "../../assets/images/devops-tech-icons/d14.png";
 import D15 from "../../assets/images/devops-tech-icons/d15.png";
+
 import BC1 from "../../assets/images/Blockchain-icons/BC1.png";
 import BC2 from "../../assets/images/Blockchain-icons/BC2.png";
-import BC3 from "../../assets/images/Blockchain-icons/BC3.jpeg";
+import BC3 from "../../assets/images/Blockchain-icons/BC3.png";
 import BC4 from "../../assets/images/Blockchain-icons/BC4.png";
 import BC5 from "../../assets/images/Blockchain-icons/BC5.png";
 import BC6 from "../../assets/images/Blockchain-icons/BC6.png";
-import BC7 from "../../assets/images/Blockchain-icons/BC7.jpg";
+import BC7 from "../../assets/images/Blockchain-icons/BC7.png";
 import BC8 from "../../assets/images/Blockchain-icons/BC8.png";
-import BC9 from "../../assets/images/Blockchain-icons/BC9.jpg";
+import BC9 from "../../assets/images/Blockchain-icons/BC9.png";
 import BC10 from "../../assets/images/Blockchain-icons/BC10.png";
 import BC11 from "../../assets/images/Blockchain-icons/BC11.png";
-import BC12 from "../../assets/images/Blockchain-icons/BC12.jpg";
+import BC12 from "../../assets/images/Blockchain-icons/BC12.png";
 import BC13 from "../../assets/images/Blockchain-icons/BC13.png";
 
 import DA1 from "../../assets/images/data-analysis-icons/DA1.png";
@@ -36,7 +37,7 @@ import DA4 from "../../assets/images/data-analysis-icons/DA4.png";
 import DA5 from "../../assets/images/data-analysis-icons/DA5.png";
 import DA6 from "../../assets/images/data-analysis-icons/DA6.png";
 import DA7 from "../../assets/images/data-analysis-icons/DA7.png";
-import DA8 from "../../assets/images/data-analysis-icons/DA8.jpg";
+import DA8 from "../../assets/images/data-analysis-icons/DA8.png";
 import DA9 from "../../assets/images/data-analysis-icons/DA9.png";
 import DA10 from "../../assets/images/data-analysis-icons/DA10.png";
 
@@ -45,16 +46,16 @@ import CS2 from "../../assets/images/cyber-security-icons/CS2.png";
 import CS3 from "../../assets/images/cyber-security-icons/CS3.png";
 import CS4 from "../../assets/images/cyber-security-icons/CS4.png";
 import CS5 from "../../assets/images/cyber-security-icons/CS5.png";
-import CS6 from "../../assets/images/cyber-security-icons/CS6.jpg";
+import CS6 from "../../assets/images/cyber-security-icons/CS6.png";
 import CS7 from "../../assets/images/cyber-security-icons/CS7.png";
 import CS8 from "../../assets/images/cyber-security-icons/CS8.png";
 import CS9 from "../../assets/images/cyber-security-icons/CS9.png";
 import CS10 from "../../assets/images/cyber-security-icons/CS10.png";
 
-import IoT1 from "../../assets/images/iot-icons/IoT1.jpg";
+import IoT1 from "../../assets/images/iot-icons/IoT1.png";
 import IoT2 from "../../assets/images/iot-icons/IoT2.png";
 import IoT3 from "../../assets/images/iot-icons/IoT3.png";
-import IoT4 from "../../assets/images/iot-icons/IoT4.jpg";
+import IoT4 from "../../assets/images/iot-icons/IoT4.png";
 import IoT5 from "../../assets/images/iot-icons/IoT5.png";
 import IoT6 from "../../assets/images/iot-icons/IoT6.png";
 import IoT7 from "../../assets/images/iot-icons/IoT7.png";
@@ -65,16 +66,16 @@ import WEB1 from "../../assets/images/web-icons/WEB1.png";
 import WEB2 from "../../assets/images/web-icons/WEB2.png";
 import WEB3 from "../../assets/images/web-icons/WEB3.png";
 import WEB4 from "../../assets/images/web-icons/WEB4.png";
-import WEB5 from "../../assets/images/web-icons/WEB5.jpg";
+import WEB5 from "../../assets/images/web-icons/WEB5.png";
 import WEB6 from "../../assets/images/web-icons/WEB6.png";
 import WEB7 from "../../assets/images/web-icons/WEB7.png";
 import WEB8 from "../../assets/images/web-icons/WEB8.png";
 import WEB9 from "../../assets/images/web-icons/WEB9.png";
 import WEB10 from "../../assets/images/web-icons/WEB10.png";
-import WEB11 from "../../assets/images/web-icons/WEB11.jpg";
+import WEB11 from "../../assets/images/web-icons/WEB11.png";
 import WEB12 from "../../assets/images/web-icons/WEB12.png";
 import WEB13 from "../../assets/images/web-icons/WEB13.png";
-import WEB14 from "../../assets/images/web-icons/WEB14.jpg";
+import WEB14 from "../../assets/images/web-icons/WEB14.png";
 
 
 import googleCloudImg from "./mnm.png"
@@ -186,37 +187,37 @@ return(
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('DevOps')}>
             DevOps as a Service (DaaS)
-            <span className={selectedCategory === 'DevOps' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'DevOps' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Blockchain and Cryptocurrency')}>
             Blockchain and Cryptocurrency
-            <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Data Analysis')}>
             Data Analysis
-            <span className={selectedCategory === 'Data Analysis' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Data Analysis' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Cyber Security')}>
             Cyber Security
-            <span className={selectedCategory === 'Cyber Security' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Cyber Security' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('IoT')}>
             IoT
-            <span className={selectedCategory === 'IoT' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'IoT' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
         <li className="service-item">
           <a href="#" onClick={() => handleSelectCategory('Web and Mobile')}>
             Web and Mobile
-            <span className={selectedCategory === 'Web and Mobile' ? "chevron left" : "chevron right"}></span>
+            <span className={selectedCategory === 'Web and Mobile' ? "chevron left icon-glow" : "chevron right"}></span>
           </a>
         </li>
       </ul>
