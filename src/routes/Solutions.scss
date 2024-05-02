@@ -237,8 +237,8 @@ section#blank p{
 
 .project-card .image img{
     height: auto;
-    width: 250px;
-    height: 250px;
+    width: 530px;
+    height: 530px;
 }
 
 
@@ -286,6 +286,12 @@ section#blank p{
     .project-card .title{
         font-size: 32px;
     }
+
+    .project-card .image img{
+        height: auto;
+        width: 450px;
+        height: 450px;
+    }
 }
 
 @media screen and  (max-width: 1592px) {
@@ -311,6 +317,12 @@ section#blank p{
 
     .project-card .description img{
         width: 120px;
+    }
+
+    .project-card .image img{
+        height: auto;
+        width: 400px;
+        height: 400px;
     }
 }
 
@@ -366,6 +378,12 @@ section#blank p{
         bottom: 200px;
     }
 
+    // .project-card .image img{
+    //     height: auto;
+    //     width: 350px;
+    //     height: 350px;
+    // }
+
 }
 
 @media screen and (max-width: 1368px) {
@@ -396,6 +414,11 @@ section#blank p{
 
     .hero-solutions .left{
         height: 500px;
+    }
+
+    .project-card .image img{
+        width: 40%;
+        height: auto;
     }
 }
 
@@ -490,7 +513,7 @@ section#blank p{
     }
 
     .swiper-nav-btns{
-        bottom: 250px;
+        bottom: 170px;
     }
 
     section#animated-projects{
@@ -504,6 +527,23 @@ section#blank p{
 
     section#industries{
         margin-bottom: 50px;
+    }
+
+    .swiper-nav-btns .prev-arrow,
+    .swiper-nav-btns .next-arrow{
+        width: 60px;
+        height: 60px;
+    }
+
+    .swiper-nav-btns .next-arrow{
+        margin-right: -30px;
+    }
+    .swiper-nav-btns .prev-arrow{
+        margin-left: -30px;
+    }
+
+    .swiper-nav-btns > div > img{
+        width: 35px;
     }
 }
 
