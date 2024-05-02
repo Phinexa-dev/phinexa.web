@@ -47,6 +47,7 @@ body {
 
 }
 
+
 .tech-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust '100px' to your preference */
@@ -73,11 +74,11 @@ body {
 
 .service-item a {
     text-decoration: none;
-    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 .chevron {
@@ -114,6 +115,11 @@ body {
   color: #06bebe;
   animation: glow 1s ease-in-out infinite;
 }
+
+
+.icon-header-te{
+  margin-top: -4rem;
+}
 @media only screen and (max-width: 1500px) {
 
     .section11 {
@@ -133,7 +139,9 @@ body {
     width: 95%; // Use full width
     margin-left: 0; // Align grid properly
 }
-
+.icon-header-te{
+  margin-top: 1rem;
+}
 
 
     .tech-iconss {
@@ -153,4 +161,9 @@ body {
 .right {
     transform: rotate(315deg);
 }
+}
+
+.tit-select{
+  color:#06bebe;
+
 }
