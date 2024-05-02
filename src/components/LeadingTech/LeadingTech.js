@@ -83,9 +83,10 @@ import otherTechImg from "./mnm.png"
 function LeadingTech() {
   const [selectedCategory, setSelectedCategory] = useState('DevOps');
 
-  const handleSelectCategory = (category) => {
+ const handleSelectCategory = (category, event) => {
+    event.preventDefault(); // Prevent the default anchor click behavior
     setSelectedCategory(category);
-  };
+};
  const categoryIcons = {
     'DevOps': [
       { img: D1, alt: 'AWS' },
@@ -184,46 +185,47 @@ function LeadingTech() {
 return(
        <div className="section11">
                  <ul className="service-list">
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('DevOps')}>
-            DevOps as a Service (DaaS)
-            <span className={selectedCategory === 'DevOps' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('Blockchain and Cryptocurrency')}>
-            Blockchain and Cryptocurrency
-            <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('Data Analysis')}>
-            Data Analysis
-            <span className={selectedCategory === 'Data Analysis' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('Cyber Security')}>
-            Cyber Security
-            <span className={selectedCategory === 'Cyber Security' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('IoT')}>
-            IoT
-            <span className={selectedCategory === 'IoT' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
-        <li className="service-item">
-          <a href="#" onClick={() => handleSelectCategory('Web and Mobile')}>
-            Web and Mobile
-            <span className={selectedCategory === 'Web and Mobile' ? "chevron left icon-glow" : "chevron right"}></span>
-          </a>
-        </li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('DevOps', e)} className={selectedCategory === 'DevOps' ? "tit-select" : ""}>
+    DevOps as a Service (DaaS)
+    <span className={selectedCategory === 'DevOps' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('Blockchain and Cryptocurrency', e)} className={selectedCategory === 'Blockchain and Cryptocurrency' ? "tit-select" : ""}>
+    Blockchain and Cryptocurrency
+    <span className={selectedCategory === 'Blockchain and Cryptocurrency' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('Data Analysis', e)} className={selectedCategory === 'Data Analysis' ? "tit-select" : ""}>
+    Data Analysis
+    <span className={selectedCategory === 'Data Analysis' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('Cyber Security', e)} className={selectedCategory === 'Cyber Security' ? "tit-select" : ""}>
+    Cyber Security
+    <span className={selectedCategory === 'Cyber Security' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('IoT', e)} className={selectedCategory === 'IoT' ? "tit-select" : ""}>
+    IoT
+    <span className={selectedCategory === 'IoT' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+<li className="service-item">
+  <a href="#" onClick={(e) => handleSelectCategory('Web and Mobile', e)} className={selectedCategory === 'Web and Mobile' ? "tit-select" : ""}>
+    Web and Mobile
+    <span className={selectedCategory === 'Web and Mobile' ? "chevron left icon-glow" : "chevron right"}></span>
+  </a>
+</li>
+
       </ul>
             <div className="tech-iconss">
 
-                <h2>Our {selectedCategory} Technologies</h2>
+                <h2 className="icon-header-te">Our {selectedCategory} Technologies</h2>
 
                 <div className="tech-icons">
        {categoryIcons[selectedCategory].map((icon, index) => (
