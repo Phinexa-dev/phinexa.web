@@ -88,15 +88,14 @@ function Home() {
         viewport={{ once: true }}
         className="right"
         >
-          <Canvas camera={{ position: [3, 3, 3] }}>
+          {/* <Canvas camera={{ position: [3, 3, 3] }}>
             <Suspense>
               <Environment preset="forest" />
             </Suspense>
             <Cube />
             <OrbitControls target={[0, 0, 0]} />
-            {/* <Stats /> */}
-          </Canvas>
-            {/* <img src={process.env.PUBLIC_URL + '/images/placeholder-image.png'} alt="hero" /> */}
+          </Canvas> */}
+            <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" />
         </motion.div>
     </div>
 
