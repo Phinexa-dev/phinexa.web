@@ -1,0 +1,27 @@
+.custom-button {
+    padding: 16px 32px;
+    background: linear-gradient(to right, #005F6A, #54949B);
+    border-radius: 12px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.custom-button span{
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1064px) {
+    .custom-button{
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .custom-button{
+        font-size: 14px;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+}

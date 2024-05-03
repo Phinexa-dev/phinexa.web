@@ -1,0 +1,294 @@
+@import '/src/Styles.scss';
+header {
+    position: fixed;
+    // background-color: white;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity as needed */
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+}
+
+nav .background{
+    background-color: $accent-color;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+    width: 422px;
+    height: 422px;
+    left: -276px;
+    top: -197px;
+}
+
+.logo{
+    position: absolute;
+    padding-left: 27px;
+    padding-top: 40px;
+    height: 137px;
+    z-index: 2;
+    cursor: pointer;
+}
+.logo img {
+    transition: transform 0.25s ease;
+    height: 70px;
+}
+
+.logo.scaled img {
+    animation: scaleDownUp 0.2s forwards;
+}
+
+@keyframes scaleDownUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100vw;
+}
+
+header nav .background.layer-two{
+    display: none;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 12s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 562px;
+    height: 562px;
+    left: -250px;
+    top: -300px;
+}
+
+header nav ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+header nav.open ul{
+    height: 350px;
+}
+
+header nav ul li{
+    width: 120px;
+    z-index: 1;
+    text-align: start;
+    list-style-type: none;
+    position: absolute;
+    font-weight: $semi-bold;
+    color: $black-300;
+    transform: translate(0, 0);
+    transition: transform 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+nav ul li a{
+    display: block;
+    width: 100%;
+}
+
+nav ul li a.active{
+    color: $secondary-color;
+}
+
+nav.open ul li:nth-child(1){transform: translate(162px, -12px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(2){transform: translate(157px, 23px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(3){transform: translate(147px, 58px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(4){transform: translate(130px, 93px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(5){transform: translate(108px, 129px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(6){transform: translate(74px, 163px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+nav.open ul li:nth-child(7){transform: translate(16px, 196px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+nav:not(.open) ul li:nth-child(1) {transition-duration: 0.2s;}
+nav:not(.open) ul li:nth-child(2) {transition-duration: 0.3s;}
+nav:not(.open) ul li:nth-child(3) {transition-duration: 0.4s;}
+nav:not(.open) ul li:nth-child(4) {transition-duration: 0.5s;}
+nav:not(.open) ul li:nth-child(5) {transition-duration: 0.6s;}
+nav:not(.open) ul li:nth-child(6) {transition-duration: 0.7s;}
+nav:not(.open) ul li:nth-child(7) {transition-duration: 0.8s;}
+
+nav .right-logo{
+    position: relative;
+    margin-left: auto;
+    padding: 15px 20px;
+    background-color: transparent
+}
+
+nav .right-logo img {
+    // width: 170px;
+    width: 120px;
+}
+
+nav.open .background.layer-two {
+    display: flex;
+}
+
+.mobile-log{
+    display: none;
+}
+
+@media screen and  (max-width: 1400px) {
+    .logo {
+        padding-left: 27px;
+        padding-top: 40px;
+    }
+    
+    .logo img{
+        height: 70px;
+    }
+
+    nav .background{
+        width: 422px;
+        height: 422px;
+        left: -290px;
+        top: -210px;
+    }
+
+    header nav .background.layer-two{
+        width: 562px;
+        height: 562px;
+        left: -261px;
+        top: -320px;
+    }
+
+    nav.open ul li:nth-child(1){transform: translate(152px, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){transform: translate(140px, 30px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){transform: translate(127px, 60px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){transform: translate(110px, 88px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){transform: translate(90px, 115px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){transform: translate(60px, 140px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){transform: translate(25px, 165px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+}
+
+@media screen and (max-width: 684px) {
+    
+    nav.open ul{
+        background: white;
+        transition: background 0.2s ease-in;
+    }
+    
+    nav ul{
+        background: transparent;
+        transition: background 0.5s ease-out;
+        transition-delay: 0.2s;
+    }
+}
+
+@media screen and  (max-width: 500px) {
+    .logo {
+        padding-left: 27px;
+        padding-top: 40px;
+        display: none;
+    }
+    
+    .logo img{
+        height: 25px;
+    }
+
+    .mobile-logo{
+        display: flex;
+        padding-left: 17px;
+        padding-top: 17px;
+        position: absolute;
+        // height: 137px;
+        z-index: 22;
+        cursor: pointer;
+        align-items: flex-start;
+    }
+
+    nav .background{
+        display: none;
+        width: 422px;
+        height: 422px;
+        left: -290px;
+        top: -210px;
+    }
+
+    nav.open .background.layer-two {
+        display: none;
+    }
+    
+    nav .right-logo img{
+        width: 95px;
+    }
+
+    header nav ul{
+        width: 100vw;
+    }
+
+    header nav ul li{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    nav:not(.open) ul li {
+        transform: translate(205%, 0px);
+        transition: transform 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    header nav.open ul{
+        margin-top: 0;
+        height: 100vh;
+        padding: 50px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header nav ul{
+        margin-top: 0;
+        padding: 50px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    header nav ul li{
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    @keyframes adjustHeight {
+        from {
+            height: 100vh;
+        }
+        to {
+            height: 'auto';
+            align-items: flex-start;
+            justify-content: center;
+        }
+    }
+
+    header nav:not(.open) ul{
+        animation: adjustHeight 2s forwards;
+    }
+
+    nav.open ul li{
+        opacity: 1;
+        text-align: center;
+    }
+
+    nav ul li {
+        transform: translate(0, 0);
+    }
+
+    nav.open ul li:nth-child(1){left:50%; transform: translate(-50%, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(2){left:50%; transform: translate(-50%, 0px); transition: transform 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(3){left:50%; transform: translate(-50%, 0px); transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(4){left:50%; transform: translate(-50%, 0px); transition: transform 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(5){left:50%; transform: translate(-50%, 0px); transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(6){left:50%; transform: translate(-50%, 0px); transition: transform 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+    nav.open ul li:nth-child(7){left:50%; transform: translate(-50%, 0px); transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+}

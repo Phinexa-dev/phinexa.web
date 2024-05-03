@@ -1,0 +1,605 @@
+@import '/src/Styles.scss';
+.hero {
+    padding: 0px 192px 0 192px;
+    padding-top: 130px;
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+    box-sizing: border-box;
+    gap: 20px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.hero .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: -1;
+}
+
+.hero .left p{
+    margin: 0;
+    text-align: left;
+}
+
+.hero .left p:nth-child(1){
+    font-size: $hero-header-font-size;
+    font-weight: $bold;
+    color: $primary-color;
+}
+
+.hero .left p:nth-child(2){
+    font-size: $hero-sub-header-font-size;
+    font-weight: $semi-bold;
+    color: $secondary-color;
+}
+
+.hero .right{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    z-index: -2;
+}
+
+.hero .right img{
+    width: 100%;
+}
+
+section#offerings .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 30px;
+}
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+    text-align: left;
+    opacity: 0;
+}
+
+.offer:nth-child(1) {animation-delay: 0.1s;}
+.offer:nth-child(2) {animation-delay: 0.2s;}
+.offer:nth-child(3) {animation-delay: 0.3s;}
+.offer:nth-child(4) {animation-delay: 0.4s;}
+.offer:nth-child(5) {animation-delay: 0.5s;}
+.offer:nth-child(6) {animation-delay: 0.6s;}
+
+.offer .title {
+    font-size: 27px;
+    font-weight: $medium;
+    color: $primary-color;
+}
+
+.offer .description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: $grey-500;
+}
+
+section#offerings button{
+    margin-top: 24px;
+}
+
+section {
+    padding: 100px 192px 0 192px;
+    margin-bottom: 100px;
+}
+section#offerings{
+    margin-bottom: 50px;
+}
+
+.section-header {
+    text-align: left;
+    font-size: 60px;
+    font-weight: $medium;
+    color: $primary-color;
+}
+
+section#animated-offerings {
+    background-image: url(../assets/backgrounds/background-1.svg);
+    background-size: auto;
+    height: 1350px;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    background-size: cover; /* Fit the background image within the container */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+section#animated-offerings ul {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // height: 100%;
+}
+
+section#animated-offerings ul li {
+    list-style: none;
+}
+
+section#projects .grid{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 60px 100px;
+}
+
+section#projects .project{
+    width: 100%;
+    height: 379px;
+    background-size: cover;
+    border-radius: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+section#projects .grid .project .title {
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: $medium;
+    text-align: start;
+}
+
+section#quotation{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+    padding-top: 0px;
+}
+
+section#quotation .header{
+    font-size: 77px;
+    font-weight: $medium;
+}
+
+section#quotation .header:nth-child(2){
+    margin-bottom: 50px;
+}
+
+.form-box{
+    box-sizing: border-box;
+    margin-top: 100px;
+    background: #BAE9F8;
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.form-box .top{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-box .top .title{
+    font-size: 32px;
+    font-weight: $medium;
+}
+
+.form-box .top .description{
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-box .hr-line{
+    height: 2px;
+    background: #9D9D9D;
+    margin: 24px;
+}
+
+.form-box .bottom{
+    display: flex;
+    flex-direction: row;
+}
+
+.form-box .bottom,
+.form-box .top{
+    gap: 24px;
+}
+
+.form-box .bottom .note{
+    max-width: 240px;
+}
+
+.form-box .top .description,
+.form-box .bottom form{
+    width: 975px;
+    margin-left: auto;
+}
+
+.form-box .bottom .note{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-box .bottom form .greeting{
+    font-size: 20px;
+    font-weight: $regular;
+}
+
+.form-box .bottom form .body{
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.form-box .button-box{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.body span {
+    line-height: 35px;
+}
+
+.body .editable-span{
+    display: inline-block;
+    color: #9D9D9D;
+    min-width: 10px;
+    text-decoration: underline;
+}
+
+.body .editable-span:focus{
+    outline: none;
+}
+
+body,
+header{
+    border-left: 2px solid rgb(228, 228, 228);
+    border-right: 2px solid rgb(228, 228, 228);
+}
+
+div#leva__root{
+    display: none;
+}
+
+@media screen and  (max-width: 1720px) {
+    .form-box .top{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .form-box .top .description{
+        margin-left: 0px;
+        width: 100%;
+        justify-content: center;
+    }
+    .form-box .top p{
+        text-align: center;
+    }
+    .form-box .bottom .note{
+        width: 30%;
+        max-width: none;
+    }
+
+    .form-box .bottom form{
+        width: 70%;
+    }
+}
+@media screen and  (max-width: 1572px) {
+    .section-header{
+        font-size: 40px;
+    }
+    section#offerings{
+        padding-top: 50px;
+    }
+    .offer .title{
+        font-size: 22px;
+    }
+    .offer .description{
+        font-size: 14px;
+        margin-top: 12px;
+    }
+
+    .hero{
+        justify-content: space-between;
+        height: 600px;
+    }
+
+    .hero .right{
+        width: 60%;
+    }
+
+    .hero .left p{
+        font-size: 45px;
+    }
+
+    .hero .left p:nth-child(1){
+        font-size: 60px;
+    }
+
+    .animated-offering{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    section#projects{
+        padding-top: 0px;
+    }
+
+    section#projects .grid{
+        gap: 30px 40px;
+    }
+
+    section#projects .project{
+        height: 320px;
+    }
+
+    section#projects .project .title{
+        font-size: 24px;
+    }
+
+    section#quotation .header{
+        font-size: 40px;
+    }
+
+    section#quotation .header:nth-child(2){
+        margin-bottom: 20px;
+    }
+
+    section#quotation .form-box{
+        margin-top: 40px;
+    }
+}
+
+@media screen and  (max-width: 1328px) {
+    .section-header{
+        font-size: 28px;
+    }
+    section#offerings .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero{
+        height: 500px;
+    }
+
+    .hero .left p:nth-child(2){
+        font-size: 32px;
+    }
+
+    .hero .left p:nth-child(1){
+        font-size: 50px;
+    }
+
+    section#projects .project{
+        height: 250px;
+    }
+
+    section#projects{
+        margin-bottom: 50px;
+    }
+
+    section#projects .grid .project .title{
+        font-size: 20px;
+    }
+
+    .form-box .bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-box .bottom .note{
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .form-box .bottom form{
+        width: 100%;
+    }
+
+    .form-box .button-box{
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    section,
+    .hero{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .hero{
+        height: 450px;
+    }
+
+    section#quotation .header{
+        font-size: 32px;
+    }
+
+    .form-box .top .title{
+        font-size: 24px;
+    }
+
+    .form-box .bottom ,
+    .form-box .bottom form .body{
+        font-size: 14px;
+    }
+    .form-box .bottom .note{
+        gap: 5px;
+    }
+
+}
+
+@media screen and (max-width: 920px) {
+    section#projects .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section#projects .project{
+        height: 320px;
+    }
+
+    .form-box .bottom form .body{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .offer .title{
+        font-size: 16px;
+    }
+    .offer .description{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+
+    .hero{
+        height: 380px;
+    }
+    .hero .left p:nth-child(2){
+        font-size: 22px;
+    }
+
+    .hero .left p:nth-child(1){
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 684px) {
+    .section-header{
+        font-size: 22px;
+    }
+    section#offerings .grid{
+        gap: 10px;
+    }
+    section#offerings .grid .offer{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    section#offerings{
+        padding-top: 20px;
+    }
+
+    section,
+    .hero{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero .right{
+        width: 80%;
+    }
+
+    .hero .left p{
+        text-align: center;
+    }
+
+    .hero div:first-child{
+        order: 2;
+    }
+
+    section#projects .project{
+        height: 250px;
+    }
+
+    section#quotation .header{
+        font-size: 24px;
+    }
+
+    section#quotation .form-box{
+        margin-top: 30px;
+    }
+
+    .form-box .bottom form .greeting{
+        font-size: 18px;
+    }
+
+    .form-box .bottom form .body span{
+        line-height: 25px;
+    }
+
+    .form-box .bottom form .body,
+    .form-box .bottom .note p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    section#offerings .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero .right{
+        width: 100%;
+    }
+
+    .form-box .hr-line{
+        margin: 10px;
+    }
+
+    .form-box .top .title{
+        font-size: 20px;
+    }
+
+    .form-box .bottom {
+        gap: 10px;
+    }
+
+    .form-box .bottom form .greeting{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 494px) {
+    .hero{
+        padding-top: 110px;
+    }
+    .hero .right{
+        width: 100%;
+    }
+
+    section#projects .project{
+        height: 200px;
+    }
+
+    section#projects .grid .project .title{
+        font-size: 16px;
+    }
+
+    section#quotation .header{
+        font-size: 20px;
+    }
+
+    .form-box .top .title{
+        font-size: 18px;
+    }
+
+    .form-box .bottom form .greeting{
+        font-size: 14px;
+    }
+
+    .form-box .bottom form .body span{
+        line-height: 20px;
+    }
+
+    .form-box{
+        padding: 24px;
+    }
+}
