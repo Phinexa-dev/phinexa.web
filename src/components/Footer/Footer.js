@@ -13,16 +13,16 @@ function Footer() {
             </div>
      <nav className="footer-nav">
          <div className="nav-group">
-            <a href="https://phinexa-881b9.web.app/">Home</a>
-             <a href="https://phinexa-881b9.web.app/solutions">Solutions</a>
-             <a href="https://phinexa-881b9.web.app/what-we-do">What We Do</a>
-             <a href="https://phinexa-881b9.web.app/our-approach">Our Approach</a>
+            <a href="phinexa.io/">Home</a>
+             <a href="phinexa.io/solutions">Solutions</a>
+             <a href="phinexa.io/what-we-do">What We Do</a>
+             <a href="phinexa.io/our-approach">Our Approach</a>
         </div>
     <div className="nav-group">
-        <a href="https://phinexa-881b9.web.app/industries">Industry</a>
-        <a href="https://phinexa-881b9.web.app/careers">Careers</a>
-        <a href="https://phinexa-881b9.web.app/about">About</a>
-        <a href="https://phinexa-881b9.web.app/contact">Contact</a>
+        <a href="phinexa.io/industries">Industry</a>
+        <a href="phinexa.io/careers">Careers</a>
+        <a href="phinexa.ioabout">About</a>
+        <a href="phinexa.io/contact">Contact</a>
     </div>
 </nav>
         </div>
