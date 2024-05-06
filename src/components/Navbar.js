@@ -31,6 +31,8 @@ function Navbar() {
         setIsOpen(false); // Update state to true
       } else if (window.innerWidth > 500) {
         setIsOpen(true); // Update state to false
+      } else {
+        setIsOpen(false);
       }
     };
 
@@ -59,7 +61,9 @@ function Navbar() {
   };
 
   const closeMenu = () => {
-    setIsOpen(false);
+    if (window.innerWidth <= 500) {
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -81,25 +85,25 @@ function Navbar() {
           <ul 
           className={linkAnimation ? 'animate' : ''}>
             <li>
-              <Link  to="/" className={activeLink === "" ? "active" : ""}>Home</Link>
+              <Link onClick={closeMenu} to="/" className={activeLink === "" ? "active" : ""}>Home</Link>
             </li>
             <li>
-              <Link to="/solutions"  className={activeLink === "solutions" ? "active" : ""}>Solutions</Link>
+              <Link onClick={closeMenu} to="/solutions"  className={activeLink === "solutions" ? "active" : ""}>Solutions</Link>
             </li>
             <li>
-              <Link to="/what-we-do"className={activeLink === "what-we-do" ? "active" : ""}>What We do</Link>
+              <Link onClick={closeMenu} to="/what-we-do"className={activeLink === "what-we-do" ? "active" : ""}>What We do</Link>
             </li>
             <li>
-              <Link to="/our-approach" className={activeLink === "our-approach" ? "active" : ""}>Our Approach</Link>
+              <Link onClick={closeMenu} to="/our-approach" className={activeLink === "our-approach" ? "active" : ""}>Our Approach</Link>
             </li>
             <li>
-              <Link to="/industries" className={activeLink === "industries" ? "active" : ""}>Industries</Link>
+              <Link onClick={closeMenu} to="/industries" className={activeLink === "industries" ? "active" : ""}>Industries</Link>
             </li>
             <li>
-              <Link to="/about" className={activeLink === "about" ? "active" : ""}>About</Link>
+              <Link onClick={closeMenu} to="/about" className={activeLink === "about" ? "active" : ""}>About</Link>
             </li>
             <li>
-              <Link to="/contact" className={activeLink === "contact" ? "active" : ""}>Contact</Link>
+              <Link onClick={closeMenu} to="/contact" className={activeLink === "contact" ? "active" : ""}>Contact</Link>
             </li>
           </ul>
 
