@@ -15,6 +15,7 @@ import image from './Contactus.png'
 function Welcome() {
     const [screenSize, setScreenSize] = useState(window.innerWidth);
     useEffect(() => {
+        window.scrollTo(0, 0);
         const handleResize = () => {
             setScreenSize(window.innerWidth);
         };

@@ -248,6 +248,11 @@ section#blank p{
     }
 }
 
+.swiper-button-disabled{
+    opacity: 0.4;
+    cursor: default;
+}
+
 
 @media screen and (max-width: 1756px) {
     .hero-solutions .background-pattern{
