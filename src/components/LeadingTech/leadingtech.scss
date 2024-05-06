@@ -12,6 +12,7 @@ body {
     justify-content: center;
     width: 90%;
   margin-left: 12rem;
+  margin-bottom: 3rem;
     background-color: #ffffff;
 }
 .tech-icons{
@@ -46,6 +47,7 @@ body {
 
 }
 
+
 .tech-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust '100px' to your preference */
@@ -56,11 +58,12 @@ body {
   background-color: #fff; /* Assuming the background is white */
   padding: 1rem; /* Add some padding around the icons */
   width: 800px; /* Adjust the width as needed */
-  height: auto; /* Or set a fixed height if necessary */
+  height: 150px; /* Or set a fixed height if necessary */
 }
 
 .tech-icon {
   /* You can style individual icon containers if needed */
+  width: 6rem;
 }
 
 .tech-icon img {
@@ -71,11 +74,11 @@ body {
 
 .service-item a {
     text-decoration: none;
-    color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
 }
 
 .chevron {
@@ -98,7 +101,26 @@ body {
 .right {
     transform: rotate(225deg);
 }
-@media only screen and (max-width: 768px) {
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(77, 236, 206, 0.7), 0 0 20px rgba(119, 236, 199, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 15px rgb(217, 91, 91), 0 0 30px rgb(71, 193, 194);
+  }
+}
+
+.icon-glow {
+  color: #06bebe;
+  animation: glow 1s ease-in-out infinite;
+}
+
+
+.icon-header-te{
+  margin-top: -4rem;
+}
+@media only screen and (max-width: 1500px) {
 
     .section11 {
     flex-direction: column; // Stack horizontally on smaller screens
@@ -107,15 +129,19 @@ body {
 }
 
 .service-list {
-    width: 100%; // Use the full width available
+  margin-top: 5rem;
+
+    width: 95%; // Use the full width available
 }
 
 .tech-icons {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
-    width: 100%; // Use full width
+    width: 95%; // Use full width
     margin-left: 0; // Align grid properly
 }
-
+.icon-header-te{
+  margin-top: 1rem;
+}
 
 
     .tech-iconss {
@@ -135,4 +161,9 @@ body {
 .right {
     transform: rotate(315deg);
 }
+}
+
+.tit-select{
+  color:#06bebe;
+
 }
