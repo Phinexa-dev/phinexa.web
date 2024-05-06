@@ -1,8 +1,13 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { motion } from "framer-motion"
 import './Industries.scss'
 
 function Industries() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
     <div className='hero industries'>
