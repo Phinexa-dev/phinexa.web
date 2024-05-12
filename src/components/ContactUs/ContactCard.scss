@@ -35,9 +35,7 @@
             justify-content: center; 
             align-items: center;
             margin: 0;
-         .myname{
-            width:6rem;
-         }
+
         }
     }
     div{
@@ -118,3 +116,9 @@
     @media (max-width: 1024px) {
 
     }
+
+.button button {
+    cursor: pointer; /* Ensures the cursor indicates clickability */
+    opacity: 1; /* Ensures the button is fully visible */
+    pointer-events: auto; /* Ensures the button can be interacted with */
+}
