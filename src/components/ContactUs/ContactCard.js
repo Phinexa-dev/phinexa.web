@@ -54,7 +54,7 @@ function ContactCard() {
             <div className='second-row'>
                 <div className='second-row-sub'>
                     <div>
-                        <span className='myname'>My name is</span>
+                        <span className='myname'>I'm</span>
                         <input
                             type="text"
                             name="from_name"
@@ -64,8 +64,8 @@ function ContactCard() {
                         />
                     </div>
                     <div>
-                        <span>from</span>
-                        <input
+                        <span className="companynm">from</span>
+                        <input 
                             type="text"
                             name="from_company"
                             placeholder='Your website or company'
@@ -75,7 +75,7 @@ function ContactCard() {
                     </div>
                 </div>
                 <div>
-                    <span>I'd like to </span>
+                    <span className="iliketo">I'd like to </span>
                     <input
                         type="text"
                         name="message"
@@ -86,7 +86,7 @@ function ContactCard() {
                 </div>
             </div>
             <div className='third-row'>
-                <span>reach me at</span>
+                <span className="reachme">reach me at</span>
                 <input
                     type="text"
                     name="reply_to"

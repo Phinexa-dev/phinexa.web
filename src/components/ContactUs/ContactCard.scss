@@ -113,8 +113,20 @@
         justify-content: center;
        }
 }
-    @media (max-width: 1024px) {
+    @media (max-width: 395px) {
+        .myname{
+          font-size: 0.8rem;
+        }
+      .companynm{
+         font-size: 0.8rem;
+      }
+      .iliketo{
+        font-size: 0.8rem;
+      }
+      .reachme{
+                font-size: 0.8rem;
 
+      }
     }
 
 .button button {
