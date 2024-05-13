@@ -241,11 +241,21 @@ section#blank p{
     height: 530px;
 }
 
+.swiper-button-disabled{
+    opacity: 0.4;
+    cursor: default;
+}
+
 
 @keyframes drawLine {
     to {
       stroke-dashoffset: 0;
     }
+}
+
+.swiper-button-disabled{
+    opacity: 0.4;
+    cursor: default;
 }
 
 

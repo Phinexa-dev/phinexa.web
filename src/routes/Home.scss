@@ -269,6 +269,18 @@ div#leva__root{
     display: none;
 }
 
+.editable-span::before {
+    content: attr(data-placeholder);
+}
+.editable-span:focus::before,
+.editable-span:not(:empty)::before {
+    content: none;
+}
+
+.editable-span:empty::before {
+    content: attr(data-placeholder); 
+}
+
 @media screen and  (max-width: 1720px) {
     .form-box .top{
         flex-direction: column;
