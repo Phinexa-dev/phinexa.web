@@ -57,10 +57,22 @@ function Home() {
     window.scrollTo(0, 0)
   }, [])
 
-  const handleContentChange = (setter, defaultValue, event) => {
-    const content = event.target.textContent.trim();
-    console.log(content);
-    setter(content === '' ? defaultValue : content);
+  // const handleContentChange = (setter, defaultValue, event) => {
+  //   const content = event.target.textContent.trim();
+  //   console.log(content);
+  //   setter(content === '' ? defaultValue : content);
+  // };
+
+  const handleContentChange = (setValue, placeholder, event) => {
+    const newValue = event.target.innerText.trim();
+    setValue(newValue === placeholder ? '' : newValue);
+  };
+
+  const handleFocus = (setValue, placeholder, event) => {
+    const currentValue = event.target.innerText.trim();
+    if (currentValue === placeholder) {
+      setValue('');
+    }
   };
 
   return (
@@ -176,7 +188,7 @@ function Home() {
           </div>
           <form action="">
             <p className="greeting">Hey, Phinexa team!</p>
-            <div className="body">
+            {/* <div className="body">
               <span>My name is </span>
               <span 
               className='editable-span' 
@@ -202,7 +214,46 @@ function Home() {
               onBlur={(event) => handleContentChange(setEmail, 'Your email', event)}
               >{email}</span>
               <span>.</span>
-              </div>
+              </div> */}
+              <div className="body">
+      <span>My name is </span>
+      <span
+        className='editable-span'
+        contentEditable={true}
+        data-placeholder='Your name'
+        onChange={(event) => setName(event.target.value)}
+        // onBlur={(event) => handleContentChange(setName, 'Your name', event)}
+        // onFocus={(event) => handleFocus(setName, 'Your name', event)}
+      ></span>
+      <span> from </span>
+      <span
+        contentEditable={true}
+        data-placeholder='Your website or company'
+        className='editable-span'
+        onChange={(event) => setCompany(event.target.value)}
+        // onBlur={(event) => handleContentChange(setCompany, 'Your website or company', event)}
+        // onFocus={(event) => handleFocus(setCompany, 'Your website or company', event)}
+      ></span>
+      <span>. I'd like to </span>
+      <span
+        contentEditable={true}
+        data-placeholder='discuss a software development project'
+        className='editable-span'
+        onChange={(event) => setProject(event.target.value)}
+        // onBlur={(event) => handleContentChange(setProject, 'discuss a software development project', event)}
+        // onFocus={(event) => handleFocus(setProject, 'discuss a software development project', event)}
+      ></span>
+      <span> and you can reach me at </span>
+      <span
+        contentEditable={true}
+        data-placeholder='Your email'
+        className='editable-span'
+        onChange={(event) => setEmail(event.target.value)}
+        // onBlur={(event) => handleContentChange(setEmail, 'Your email', event)}
+        // onFocus={(event) => handleFocus(setEmail, 'Your email', event)}
+      ></span>
+      <span>.</span>
+    </div>
           </form>
         </div>
         <div className="button-box">
