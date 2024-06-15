@@ -9,6 +9,10 @@
     gap: 20px;
     overflow-x: hidden;
     box-sizing: border-box;
+
+    // updated by cube
+    position: relative;
+    z-index: 0;
 }
 
 .hero .left{
@@ -42,7 +46,7 @@
     z-index: -2;
 }
 
-.hero .right img{
+.hero .right .img{
     width: 100%;
 }
 

@@ -1,11 +1,9 @@
-import React, {useState, useEffect, Suspense} from 'react'
+import React, {useState, useEffect} from 'react'
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
-import { Canvas } from '@react-three/fiber';
-import Cube from '../components/Rubik/Rubik';
-import { OrbitControls, Environment } from '@react-three/drei'
+import Rubic from '../components/Rubic/Rubic';
 
 const gridContainerVariant = {
   hidden: {opacity: 0},
@@ -107,7 +105,8 @@ function Home() {
             <Cube />
             <OrbitControls target={[0, 0, 0]} />
           </Canvas> */}
-            <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" />
+            <Rubic className='img'/>
+            {/* <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" /> */}
         </motion.div>
     </div>
 
