@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Canvas } from '@react-three/fiber';
 import Cube from '../components/Rubik/Rubik';
 import { OrbitControls, Environment } from '@react-three/drei'
+import {Helmet} from 'react-helmet';
 
 const gridContainerVariant = {
   hidden: {opacity: 0},
@@ -65,6 +66,16 @@ function Home() {
 
   return (
     <>
+       <Helmet>
+        <title>Phinexa </title>
+        <meta
+          name="description"
+          content="Phinexa offers DevOps as a service, software development, cybersecurity, cloud migration, IT automation, and container orchestration to streamline your IT operations."
+          data-rh= 'true'
+        />
+        <link rel="canonical" href="https://www.phinexa.io/contact" />
+        
+      </Helmet>
     <div className='hero'>
         <motion.div 
         variants={{
