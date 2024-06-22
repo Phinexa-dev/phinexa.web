@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './WhatWeDo.scss';
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
@@ -33,116 +33,112 @@ function WhatWeDo() {
     "Cyber Security",
     "IoT",
     "Web and Mobile"
-];
+  ];
 
   return (
     <>
-    <div className='hero whatwedohero'>
+      <div className='hero whatwedohero'>
         <motion.div 
-        variants={{
-          hidden: {x: "-50%"},
-          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
-        }}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="left">
+          variants={{
+            hidden: {x: "-50%"},
+            show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="left">
             <p>What We Do</p>
             <p>at Phinexa</p>
             <p className="description">Our team innovates tailored IT solutions, seamlessly integrating processes, and solving challenges. We are your catalyst for technological advancement, simplifying IT complexities.</p>
         </motion.div>
         <motion.div 
-        variants={{
-          hidden: {x: "50%"},
-          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
-        }}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="right">
+          variants={{
+            hidden: {x: "50%"},
+            show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+          }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="right">
             <img src={process.env.PUBLIC_URL + '/images/what-we-do.svg'} alt="hero" />
         </motion.div>
-    </div>
+      </div>
 
-    <section id='whatwedo-section-title'>
+      <section id='whatwedo-section-title'>
         <p>Future proof with leading edge technologies</p>
-    </section>
+      </section>
 
-    <section id='whatwedo-section'>
-        <div 
-        
-        className="left">
+      <section id='whatwedo-section'>
+        <div className="left">
           {categories.map((category, index) => (
-              <div
-                  key={index}
-                  className={`tech-category ${index === activeIndex ? 'active' : ''}`}
-                  onClick={() => setActiveIndex(index)}
-              >
-                  <p>{category}</p>
-                  <FaAngleRight className='icon' />
-              </div>
+            <div
+              key={index}
+              className={`tech-category ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <p>{category}</p>
+              <FaAngleRight className='icon' />
+            </div>
           ))}
         </div>
         <div className="right">
-            <motion.div 
+          <motion.div 
+            key={activeIndex} // Trigger re-render and animation
             variants={gridContainerVariant}
             initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+            animate="show"
             className="grid">
-
-              {images[activeIndex].map(icon => (
-                <motion.img 
+            {images[activeIndex].map((icon, idx) => (
+              <motion.img 
+                key={idx}
                 variants={gridElementVariant}
                 src={process.env.PUBLIC_URL + '/images/' + icon} 
                 alt="" 
-                className="tech-icon" />
-              ))}
-              
-            </motion.div>
+                className="tech-icon" 
+              />
+            ))}
+          </motion.div>
         </div>
-    </section>
+      </section>
 
-    <section id='whatwedo-section-mobile'>
+      <section id='whatwedo-section-mobile'>
         <p className="section-header">Future proof with leading edge technologies</p>
         {categories.map((category, index) => (
-            <div className="container">
-              <div
-                  key={index}
-                  className={`tech-category ${index === activeIndex ? 'active' : ''}`}
-                  onClick={() => setActiveIndex(index)}
-              >
-                  <p>{category}</p>
-                  <FaAngleDown className='icon' />
-              </div>
+          <div key={index} className="container">
+            <div
+              className={`tech-category ${index === activeIndex ? 'active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <p>{category}</p>
+              <FaAngleDown className='icon' />
+            </div>
 
-              {index === activeIndex && (
-                <motion.div 
+            {index === activeIndex && (
+              <motion.div 
+                key={activeIndex} // Trigger re-render and animation
                 variants={gridContainerVariant}
                 initial="hidden"
-                whileInView="show"
-                viewport={{ once: true }}
+                animate="show"
                 className="grid">
-  
-                  {images[activeIndex].map(icon => (
-                    <motion.img 
+                {images[activeIndex].map((icon, idx) => (
+                  <motion.img 
+                    key={idx}
                     variants={gridElementVariant}
                     src={process.env.PUBLIC_URL + '/images/' + icon} 
                     alt="" 
-                    className="tech-icon" />
-                  ))}
-                  
-                </motion.div>
-              )}
-            </div>
+                    className="tech-icon" 
+                  />
+                ))}
+              </motion.div>
+            )}
+          </div>
         ))}
-    </section>
+      </section>
     </>
   )
 }
 
 export default WhatWeDo
-
 const images = [
   [
     'devops-tech-icons/d1.png',
