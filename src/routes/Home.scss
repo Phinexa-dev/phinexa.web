@@ -34,7 +34,7 @@
 }
 
 .hero .left p:nth-child(2){
-    font-size: $hero-sub-header-font-size;
+    font-size: 40px;
     font-weight: $semi-bold;
     color: $secondary-color;
 }
@@ -521,6 +521,10 @@ div#leva__root{
 
     .hero .right{
         width: 80%;
+    }
+
+    .hero .right img{
+        width: 100%;
     }
 
     .hero .left p{

@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './routes/Home';
 import WhatWeDoPage from './routes/WhatWeDoPage'
+import WhatWeDo from './routes/WhatWeDo';
 import Welcome from './components/welcome/Welcome'
 import Careers from './components/Careers/Careers'
 import Approach from './routes/Approach';
@@ -19,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<Welcome/>}/>
-        <Route path="/what-we-do" element={<WhatWeDoPage/>}/>
+        <Route path="/what-we-do" element={<WhatWeDo/>}/>
         <Route path="/careers" element={<Careers/>}/>
         <Route path="/our-approach" element={<Approach/>}/>
         <Route path="/solutions" element={<Solution/>}/>

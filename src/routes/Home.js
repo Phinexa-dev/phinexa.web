@@ -105,8 +105,8 @@ function Home() {
             <Cube />
             <OrbitControls target={[0, 0, 0]} />
           </Canvas> */}
-            <Rubic className='img'/>
-            {/* <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" /> */}
+            {/*<Rubic className='img'/> */}
+            <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" />
         </motion.div>
     </div>
 
