@@ -138,6 +138,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); // Adjust grid layout
     width: 95%; // Use full width
     margin-left: 0; // Align grid properly
+    height: auto;
 }
 .icon-header-te{
   margin-top: 1rem;
