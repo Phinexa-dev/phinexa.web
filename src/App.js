@@ -12,6 +12,7 @@ import Approach from './routes/Approach';
 import Solution from './routes/Solutions';
 import Industries from './routes/Industries';
 import ContactUs from './routes/ContactUs';
+import About from './routes/About';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/about" element={<Welcome/>}/>
+        {/* <Route path="/about" element={<Welcome/>}/> */}
+        <Route path="/about" element={<About/>}/>
         <Route path="/what-we-do" element={<WhatWeDo/>}/>
         <Route path="/careers" element={<Careers/>}/>
         <Route path="/our-approach" element={<Approach/>}/>
@@ -27,7 +29,7 @@ function App() {
         <Route path="/industries" element={<Industries/>}/>
            <Route path="/contact" element={<ContactUs/>}/>
       </Routes>
-         <Footer/>
+      <Footer/>
     </div>
   );
 }
