@@ -77,6 +77,10 @@ header nav ul{
 }
 
 header nav.open ul{
+    // display: flex;
+}
+
+header nav.open ul{
     height: 350px;
 }
 
@@ -282,6 +286,10 @@ nav.open .background.layer-two {
 
     nav ul li {
         transform: translate(0, 0);
+    }
+
+    header nav ul{
+        height: 60px;
     }
 
     nav.open ul li:nth-child(1){left:50%; transform: translate(-50%, 0px); transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);}

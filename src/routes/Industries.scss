@@ -17,6 +17,13 @@ section.industries .grid .offer:last-child{
     // grid-column: span 3;
 }
 
+.hero.industries{
+    .left,
+    .right{
+        width: 50%;
+    }
+}
+
 section.industries .grid .offer img{
     max-width: 200px;
 }
@@ -33,9 +40,42 @@ section.industries .grid .offer img{
     }
 }
 
+@media screen and (max-width: 980px) {
+    .hero.industries{
+        .left{
+            width: 60%;
+
+            p:nth-child(1){
+                font-size: 45px;
+            }
+        }
+        .right{
+            width: 40%;
+        }
+    }
+}
+
 @media screen and (max-width: 876px) {
     .hero.industries .left p:nth-child(1) {
       font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 684px) {
+    .hero.industries {
+        
+        .right{
+            width: 100%;
+            justify-content: center;
+
+            img{
+                width: 80%;
+            }
+        }
+
+        .left {
+            width: 100%;
+        }
     }
 }
 

@@ -105,7 +105,8 @@ section#benefits .paragraph{
         width: 70%;
     }
     .hero.approach .left p:nth-child(1){
-        font-size: 70px;
+        // font-size: 70px;
+        font-size: 60px;
     }
 
     .hero.approach .left p:nth-child(2){
@@ -157,6 +158,10 @@ section#benefits .paragraph{
     section.client-benefits{
         padding-top: 0px;
     }
+
+    .hero.approach .right img{
+        width: 550px;
+    }
 }
 
 @media screen and (max-width: 1522px) {
@@ -203,11 +208,19 @@ section#benefits .paragraph{
     }   
 
     .hero.approach .left p:nth-child(1){
-        font-size: 55px;
+        font-size: 50px;
     }
 
     .hero.approach .left p:nth-child(2){
         font-size: 30px;
+    }
+
+    .hero.approach .right{
+        width: 50%;
+    }
+
+    .hero.approach .right img{
+        width: 480px;
     }
 }
 
@@ -264,7 +277,7 @@ section#benefits .paragraph{
 
 @media screen and (max-width: 970px) {
     .hero.approach{
-        height: 400px;
+        height: 450px;
     }
 
     section#benefits .top{
@@ -286,11 +299,20 @@ section#benefits .paragraph{
     .client-benefits .grid{
         gap: 20px;
     }
+    .hero.approach .left p:nth-child(1){
+        font-size: 40px;
+    }
+    .hero.approach .left p:nth-child(2){
+        font-size: 30px;
+    }
+    .hero.approach .right img{
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 860px) {
     .hero.approach{
-        height: 380px;
+        height: 400px;
     }    
 
     .hero.approach .left p:nth-child(1){
@@ -303,6 +325,15 @@ section#benefits .paragraph{
 
     section.approach{
         margin-bottom: 60px;
+    }
+
+    .hero.approach .right{
+        width: 40%;
+    }
+
+    .hero.approach .right img{
+        width: 300px;
+        // transform: translateX(50px);
     }
 
 }
@@ -343,6 +374,14 @@ section#benefits .paragraph{
     .hero.approach .left,
     .hero.approach .right{
         width: 100%;
+    }
+
+    .hero.approach .right{
+        justify-content: center;
+    }
+
+    .hero.approach .right img{
+        transform: translateX(20px);
     }
 }
 

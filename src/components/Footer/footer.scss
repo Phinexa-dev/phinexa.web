@@ -46,6 +46,7 @@
     align-items: center;
     width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .nav-group {
@@ -72,6 +73,22 @@
 
 .footer-bottom p {
     margin: 0;
+}
+
+@media (max-width: 776px) {
+    .footer-nav {
+        flex-direction: row;
+        width: 140%;
+        justify-content: space-between;
+    }
+    .nav-group {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .nav-group a {
+    margin-bottom:5px;
+    }
+
 }
 
 @media (max-width: 550px) {

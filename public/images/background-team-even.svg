@@ -1,0 +1,7 @@
+<svg width="346" height="297" viewBox="0 0 346 297" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 164C5 81.1573 72.1573 14 155 14H330V147C330 229.843 262.843 297 180 297H5V164Z" fill="#54949B"/>
+<path className='curved-line' d="M3 104.5C8.83333 83.1667 52 8.5 139 3" stroke="#54949B" stroke-width="5" stroke-linecap="round"/>
+<path d="M263.5 94.5V53.5" stroke="#BAE9F8" stroke-width="3" stroke-linecap="round"/>
+<path d="M273 99L295 31" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<path className='curved-line' d="M295 104C299.022 102.201 307.814 96.6114 310.81 88.6416C314.416 91.9623 323.458 98.6038 330.781 98.6038C339.934 98.6038 339.518 86.5659 323.708 72.8681C309.712 60.7421 302.489 65.3962 308.314 72.8681C323.408 92.2304 339.415 96.4403 343.678 88.6416C346.174 84.0754 333.693 65.8113 322.043 60" stroke="#BAE9F8" stroke-width="3" stroke-linecap="round"/>
+</svg>
