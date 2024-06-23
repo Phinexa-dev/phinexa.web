@@ -13,6 +13,7 @@ import Solution from './routes/Solutions';
 import Industries from './routes/Industries';
 import ContactUs from './routes/ContactUs';
 import About from './routes/About';
+import Contact from './routes/Contact';
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
         <Route path="/our-approach" element={<Approach/>}/>
         <Route path="/solutions" element={<Solution/>}/>
         <Route path="/industries" element={<Industries/>}/>
-           <Route path="/contact" element={<ContactUs/>}/>
+        {/* <Route path="/contact" element={<ContactUs/>}/> */}
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
       <Footer/>
     </div>

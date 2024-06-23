@@ -20,7 +20,7 @@ function About() {
         viewport={{ once: true }}
         className="left">
             <p>Hello,</p>
-            <p>Welcome to Phinexa.</p>
+            <p>Welcome to Phinexa</p>
             <p className="description">We specialize in transforming IT complexity into elegant simplicity. Our tailored solutions reflect the innovation and precision that define industry leaders. As solution architects, we navigate IT challenges with clarity and efficiency. Embrace a future where complexities are tamed – welcome to a realm where technology becomes effortlessly intuitive.</p>
         </motion.div>
         <motion.div 
