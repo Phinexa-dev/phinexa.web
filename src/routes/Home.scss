@@ -9,6 +9,10 @@
     gap: 20px;
     overflow-x: hidden;
     box-sizing: border-box;
+
+    // updated by cube
+    position: relative;
+    z-index: 0;
 }
 
 .hero .left{
@@ -34,7 +38,7 @@
 }
 
 .hero .left p:nth-child(2){
-    font-size: $hero-sub-header-font-size;
+    font-size: 40px;
     font-weight: $semi-bold;
     color: $secondary-color;
 }
@@ -46,7 +50,7 @@
     z-index: -2;
 }
 
-.hero .right img{
+.hero .right .img{
     width: 100%;
 }
 
@@ -271,6 +275,18 @@ header{
 
 div#leva__root{
     display: none;
+}
+
+.editable-span::before {
+    content: attr(data-placeholder);
+}
+.editable-span:focus::before,
+.editable-span:not(:empty)::before {
+    content: none;
+}
+
+.editable-span:empty::before {
+    content: attr(data-placeholder); 
 }
 
 @media screen and  (max-width: 1720px) {
@@ -509,6 +525,10 @@ div#leva__root{
 
     .hero .right{
         width: 80%;
+    }
+
+    .hero .right img{
+        width: 100%;
     }
 
     .hero .left p{

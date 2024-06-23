@@ -1,0 +1,77 @@
+
+
+.form-box .top .description, .form-box .bottom form {
+    margin-left: 0px !important;
+}
+
+.contact-form#quotation{
+    align-items: center;
+    .form-box{
+        // max-width: 1080px;
+
+        .bottom {
+            justify-content: space-between;
+            .note {
+                max-width: unset;
+                width: 40%;
+                align-items: center;
+                img{
+                    width: 300px;
+                    height: auto;
+                }
+            }
+            form {
+                width: unset;
+                max-width: 870px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1328px) {
+    .contact-form#quotation{
+        .form-box{
+            .bottom{
+                .note{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-form#quotation{
+        .button-box{
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-form#quotation{
+        .form-box{
+            .bottom{
+                .note{
+                    img{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-form#quotation{
+        .form-box{
+            .bottom{
+                .note{
+                    img{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

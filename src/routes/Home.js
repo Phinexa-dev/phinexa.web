@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
+import { motion } from "framer-motion"
+import Rubic from '../components/Rubic/Rubic';
 import { motion } from "framer-motion";
 
 const gridContainerVariant = {
@@ -157,6 +159,25 @@ function Home() {
           ))}
         </ul>
       </section>
+
+    {/* <section id='projects'>
+      <p className="section-header">Our Projects</p>
+      <motion.div 
+      variants={gridContainerVariant}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="grid">
+        {projects.map((project, index) => (
+          <motion.div 
+          variants={gridProjectElementVariant}
+          className="project"
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL + project.imagePath})` }}>
+            <p className="title">{project.title}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section> */}
 
       <section id='quotation'>
         <p className="header">Reach out to us</p>

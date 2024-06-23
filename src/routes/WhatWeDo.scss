@@ -1,0 +1,316 @@
+@import '/src/Styles.scss';
+
+#whatwedo-section .left{
+    transform: rotate(0deg);
+}
+
+.hero.whatwedohero {
+    box-sizing: border-box;
+    height: unset;
+    // padding-top: 210px;
+
+    .left .description{
+        font-size: 20px;
+    }
+
+    .right {
+        position: relative;
+        img {
+            // height: 100%;
+            position: relative;
+            max-width: 570px;
+        }
+    }
+}
+
+#whatwedo-section-title{
+    margin-bottom: 50px;
+    text-align: left;
+    font-size: 40px;
+    font-weight: $medium;
+    color: $primary-color;
+
+    @media screen and (max-width: 1572px) {
+        font-size: 30px;
+    }
+}
+
+#whatwedo-section{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding-top: 0px;
+
+    .left {
+        width: 360px;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 2px;
+        background: rgb(235, 235, 235);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgb(235, 235, 235);
+        height: fit-content;
+    }
+
+    .right {
+        width: calc(100% - 372px);
+        height: 100%;
+        transform: rotate(0deg);
+        border-radius: 10px;
+        // background: rgb(248, 248, 248);
+
+        .grid{
+            display: grid;
+            gap: 12px;
+            // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-columns: repeat(9, 1fr);
+
+            img{
+                height: 120px;
+                width: 120px;
+                padding: 0px;
+                box-sizing: border-box;
+                border-radius: 12px;
+                background: white;
+                background: rgb(248, 248, 248);
+            }
+        }
+    }
+}
+
+#whatwedo-section-mobile{
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    display: none;
+    padding-top: 70px;
+
+    .container .tech-category{
+        overflow: hidden;
+        background: rgb(248, 248, 248);
+    }
+
+    .container .tech-category:first-child,
+    .container .tech-category:last-child{
+        border-radius: 10px;
+    }
+
+    .container .tech-category.active{
+        border-radius: 10px;
+        background: $primary-color;
+    }
+    .grid{
+        display: grid;
+        gap: 12px;
+        width: 100%;
+        padding: 12px;
+        box-sizing: border-box;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+        img{
+            height: 120px;
+            width: 120px;
+            padding: 0px;
+            box-sizing: border-box;
+            border-radius: 12px;
+            background: white;
+            background: rgb(248, 248, 248);
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 754px) {
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+            img{
+                height: 90px;
+                width: 90px;
+            }
+        }
+
+        @media screen and (max-width: 520px) {
+            grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+            img{
+                height: 70px;
+                width: 70px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 417px) {
+        .container .tech-category{
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#whatwedo-section .right .grid {
+    @media screen and (max-width: 1815px) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    @media screen and (max-width: 1680px) {
+        grid-template-columns: repeat(7, 1fr);
+    }
+    @media screen and (max-width: 1640px) {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    @media screen and (max-width: 1520px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media screen and (max-width: 1360px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    // this is where we switch to mobile view
+    // @media screen and (max-width: 1080px) {
+    //     grid-template-columns: repeat(3, 1fr);
+    // }
+}
+
+@media screen and (max-width: 1080px) {
+    #whatwedo-section{
+        display: none;
+    }
+    #whatwedo-section-title{
+        display: none;
+    }
+    #whatwedo-section-mobile{
+        display: flex;
+    }
+}
+
+.tech-category{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    background: white;
+    box-sizing: border-box;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    p{
+        font-size: 16px;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+}
+
+.tech-category:hover{
+    background: rgb(235, 235, 235);
+}
+
+.tech-category.active{
+    background: $primary-color;
+    color: white;
+}
+
+@media screen and (max-width: 1752px) {
+    .hero.whatwedohero {
+        padding-top: 210px;
+        .right {
+            img {
+                // max-width: 470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1572px) {
+    .hero.whatwedohero {
+        .left .description{
+            font-size: 14px;
+        }
+    
+        .right {
+            img {
+                max-width: 470px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1228px) {
+    .hero.whatwedohero {
+        padding-top: 180px;
+
+        .right {
+            img {
+                max-width: 370px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .hero.whatwedohero {
+        // padding-top: 210px;
+        .left .description{
+            font-size: 12px;
+        }
+    
+        .right {
+            img {
+                max-width: 270px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 732px) {
+    .hero.whatwedohero {
+        padding-top: 150px;
+        flex-direction: column;
+        .left{
+            order: 2;
+
+            .description{
+                margin-top: 16px;
+            }
+        }
+        .right{
+            width: 100%;
+            order: 1;
+            justify-content: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .hero.whatwedohero {
+        padding-top: 110px;
+        padding-left: 70px;
+        padding-right: 70px;
+
+        .right {
+            img {
+                max-width: 200px;
+            }
+        }
+
+        .description{
+            min-width: 300px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+    #whatwedo-section-mobile {
+        .section-header{
+            font-size: 18px;
+        }
+    }
+}
