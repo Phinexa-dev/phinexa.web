@@ -22,7 +22,11 @@
     margin: 0;
     text-align: left;
 }
-
+.editable-span:empty:before {
+    content: attr(data-placeholder);
+    color: gray;
+  }
+  
 .hero .left p:nth-child(1){
     font-size: $hero-header-font-size;
     font-weight: $bold;

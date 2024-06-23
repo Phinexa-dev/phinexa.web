@@ -16,7 +16,7 @@ function ContactCard() {
 
     const sendEmail = (e) => {
         e.preventDefault(); // Prevent the default form submission behavior
-
+        console.log("subbmitted the form")
         // Use emailjs to send the form data
         emailjs.sendForm('service_kh0k1uo', 'template_vqsts7a', form.current, '506kOM8R-RsmpqddF')
             .then(
