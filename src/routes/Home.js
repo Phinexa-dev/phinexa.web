@@ -4,8 +4,6 @@ import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
-import Rubic from '../components/Rubic/Rubic';
-import { motion } from "framer-motion";
 
 const gridContainerVariant = {
   hidden: { opacity: 0 },
