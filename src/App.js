@@ -15,10 +15,12 @@ import ContactUs from './routes/ContactUs';
 import About from './routes/About';
 import Contact from './routes/Contact';
 import Carreers from './routes/Carreers';
+import { Toaster } from 'sonner'
 
 function App() {
   return (
     <div className="App">
+      <Toaster richColors  />
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>

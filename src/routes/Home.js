@@ -4,6 +4,7 @@ import './Home.scss';
 import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
+import { toast } from 'sonner'
 
 const gridContainerVariant = {
   hidden: { opacity: 0 },
@@ -81,6 +82,7 @@ function Home() {
           console.log('SUCCESS!', result.text);
           setMessage('Your message has been sent successfully!');
           setMessageType('success');
+          toast.success('Your message has been sent successfully!');
           // Clear form fields after successful submission
           setName('');
           setCompany('');
@@ -91,6 +93,7 @@ function Home() {
           console.log('FAILED...', error.text);
           setMessage('Failed to send message. Please try again later.');
           setMessageType('error');
+          toast.error('Failed to send message. Please try again later.');
         }
       );
   };
@@ -235,11 +238,11 @@ function Home() {
               </div>
             </form>
           </div>
-          {message && (
+          {/* {message && (
             <div className={`message ${messageType === 'error' ? 'error' : 'success'}`}>
               {message}
             </div>
-          )}
+          )} */}
         </motion.div>
       </section>
     </>
