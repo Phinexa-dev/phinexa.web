@@ -258,6 +258,9 @@ section#blank p{
     cursor: default;
 }
 
+.swiper-scrollbar.swiper-scrollbar-horizontal{
+    z-index: 0 !important;
+}
 
 @media screen and (max-width: 1756px) {
     .hero-solutions .background-pattern{
