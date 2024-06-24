@@ -33,7 +33,7 @@ hero-solutions .left p{
 }
 
 .hero-solutions .left p:nth-child(2){
-    font-size: $hero-sub-header-font-size;
+    font-size: 40px;
     font-weight: $semi-bold;
     color: $secondary-color;
 }
@@ -258,6 +258,9 @@ section#blank p{
     cursor: default;
 }
 
+.swiper-scrollbar.swiper-scrollbar-horizontal{
+    z-index: 0 !important;
+}
 
 @media screen and (max-width: 1756px) {
     .hero-solutions .background-pattern{
