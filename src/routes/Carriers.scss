@@ -319,10 +319,12 @@
         font-size: 14px;
     }
 
-    .css-ahj2mt-MuiTypography-root{
+    .css-ahj2mt-MuiTypography-root,
+    .MuiTypography-body1{
         font-size: 14px !important;
     }
-    .css-1tpky2o-MuiTypography-root{
+    .css-1tpky2o-MuiTypography-root,
+    .MuiTypography-h5{
         font-size: 22px !important;
     }
 }
@@ -337,10 +339,12 @@
         font-size: 12px;
     }
 
-    .css-ahj2mt-MuiTypography-root{
+    .css-ahj2mt-MuiTypography-root,
+    .MuiTypography-body1{
         font-size: 12px !important;
     }
-    .css-1tpky2o-MuiTypography-root{
+    .css-1tpky2o-MuiTypography-root,
+    .MuiTypography-h5{
         font-size: 16px !important;
     }
 }
@@ -352,17 +356,21 @@
 }
 
 @media screen and (max-width: 432px) {
-    .css-ahj2mt-MuiTypography-root{
+    .css-ahj2mt-MuiTypography-root,
+    .MuiTypography-body1{
         font-size: 10px !important;
     }
-    .css-1tpky2o-MuiTypography-root{
+    .css-1tpky2o-MuiTypography-root,
+    .MuiTypography-h5{
         font-size: 14px !important;
     }
-    .css-55vwbm-MuiTimeline-root{
+    .css-55vwbm-MuiTimeline-root,
+    .MuiTimeline-root{
         padding: 0px !important;
     }
 
-    .css-i4bv87-MuiSvgIcon-root{
+    .css-i4bv87-MuiSvgIcon-root,
+    .MuiSvgIcon-root{
         font-size: 12px !important;
     }
     .css-ymt5it-MuiTypography-root-MuiTimelineOppositeContent-root{
