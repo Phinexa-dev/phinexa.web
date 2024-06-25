@@ -6,6 +6,7 @@ import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
 import { toast } from 'sonner'
 import {Helmet} from 'react-helmet';
+import CubeWrapper from '../components/Cube/CubeWrapper';
 
 const gridContainerVariant = {
   hidden: { opacity: 0 },
@@ -111,7 +112,7 @@ function Home() {
         <link rel="canonical" href="https://www.phinexa.io/contact" />
         
       </Helmet>
-    <div className='hero'>
+    <div className='hero homepage'>
         <motion.div 
         variants={{
           hidden: {x: "-50%"},
@@ -134,7 +135,8 @@ function Home() {
           viewport={{ once: true }}
           className="right"
         >
-          <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" />
+           <CubeWrapper/>
+          {/* <img src={process.env.PUBLIC_URL + '/images/hero-1.svg'} alt="hero" /> */}
         </motion.div>
       </div>
 
