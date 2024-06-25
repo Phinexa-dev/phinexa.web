@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import emailjs from '@emailjs/browser';
 import Button from '../components/Button';
 import { toast } from 'sonner'
+import { Helmet } from 'react-helmet';
 import './Contact.scss';
 
 const formBoxVariant = {
@@ -74,6 +75,14 @@ function Contact() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Us - Phinexa</title>
+        <meta
+          name="description"
+          content="Get in touch with Phinexa for priority access to our client engagement team. Discuss your software development needs and more. Contact us today!"
+        />
+        <link rel="canonical" href="https://www.phinexa.io/contact" />
+      </Helmet>
     <div className='hero about contact'>
         <motion.div 
         variants={{

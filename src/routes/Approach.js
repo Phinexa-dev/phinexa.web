@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Approach.scss';
 import { motion } from "framer-motion"
 import IterativeSDLC from '../components/IterativeSDLC';
+import { Helmet } from 'react-helmet';
 
 const gridContainerVariant = {
     hidden: {opacity: 0},
@@ -28,6 +29,14 @@ function Approach() {
 
   return (
     <>
+    <Helmet>
+        <title>Our Approach  - Phinexa</title>
+        <meta
+          name="description"
+          content="Discover how Phinexa simplifies IT complexity with a streamlined software development process. Learn about our agile approach, scalability, quality, and tailored solutions."
+        />
+        <link rel="canonical" href="https://www.phinexa.io/our-approach" />
+      </Helmet>
     <div className='hero approach'>
         <motion.div 
         variants={{

@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { motion } from "framer-motion"
 import './About.scss'
+import { Helmet } from 'react-helmet'
 
 function About() {
   useEffect(() => {
@@ -9,6 +10,14 @@ function About() {
 
   return (
     <>
+       <Helmet>
+        <title>About Us - Phinexa</title>
+        <meta
+          name="description"
+          content="Discover how Phinexa transforms IT complexity into elegant simplicity with tailored solutions. Meet our team of solution architects dedicated to innovative IT solutions."
+        />
+        <link rel="canonical" href="https://www.phinexa.io/about" />
+      </Helmet>   
     <div className='hero about'>
         <motion.div 
         variants={{

@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import SolutionsBackground from '../components/SolutionsBackground';
-
+import { Helmet } from 'react-helmet';
 function Solution() {
 
     useEffect(() => {
@@ -28,6 +28,14 @@ function Solution() {
 
   return (
     <>
+    <Helmet>
+        <title>Solutions - Phinexa</title>
+        <meta
+          name="description"
+          content="Experience excellence with Phinexa's IT automation, container orchestration, DevOps as a service, software development, cybersecurity, and cloud migration solutions."
+        />
+        <link rel="canonical" href="https://www.phinexa.io/solutions" />
+      </Helmet>
     <div className='hero-solutions'>
         <motion.div 
         variants={{
