@@ -3,6 +3,7 @@ import './WhatWeDo.scss';
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleDown } from "react-icons/fa6";
 import { motion } from "framer-motion"
+import {Helmet} from 'react-helmet'
 
 const gridContainerVariant = {
   hidden: {opacity: 0},
@@ -41,6 +42,14 @@ function WhatWeDo() {
 
   return (
     <>
+    <Helmet>
+        <title>What We Do - Phinexa</title>
+        <meta
+          name="description"
+          content="Discover how Phinexa innovates with tailored IT solutions, simplifying complexities through DevOps, blockchain, cybersecurity, data analysis, IoT, and more."
+        />
+        <link rel="canonical" href="https://www.phinexa.com/what-we-do" />
+      </Helmet>
       <div className='hero whatwedohero'>
         <motion.div 
           variants={{

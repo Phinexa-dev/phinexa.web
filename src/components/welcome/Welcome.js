@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Welcome.scss'
 import '../../App.css'
+import { Helmet } from 'react-helmet';
 import gallery_1 from './gallery_1.png'
 import gallery_2 from './gallery_2.png'
 import gallery_3 from './gallery_3.png'
@@ -27,6 +28,15 @@ function Welcome() {
         };
     }, []);
     return (
+        <>
+        <Helmet>
+        <title>About Us - Phinexa</title>
+        <meta
+          name="description"
+          content="Discover how Phinexa transforms IT complexity into elegant simplicity with tailored solutions. Meet our team of solution architects dedicated to innovative IT solutions."
+        />
+        <link rel="canonical" href="https://www.phinexa.io/about" />
+         </Helmet>
 
         <div className="container-wel">
             <div className="main-wel">
@@ -134,6 +144,7 @@ function Welcome() {
 
             </div>
         </div>
+</>
     )
 }
 export default Welcome;

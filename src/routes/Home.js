@@ -5,6 +5,7 @@ import Button from '../components/Button';
 import KeyOffering from '../components/KeyOffering';
 import { motion } from "framer-motion"
 import { toast } from 'sonner'
+import {Helmet} from 'react-helmet';
 import CubeWrapper from '../components/Cube/CubeWrapper';
 
 const gridContainerVariant = {
@@ -101,18 +102,28 @@ function Home() {
 
   return (
     <>
-      <div className='hero homepage'>
-        <motion.div
-          variants={{
-            hidden: { x: "-50%" },
-            show: { x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 } }
-          }}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          className="left">
-          <p>Simplifying</p>
-          <p>IT Complexity</p>
+       <Helmet>
+        <title>Phinexa </title>
+        <meta
+          name="description"
+          content="Phinexa offers DevOps as a service, software development, cybersecurity, cloud migration, IT automation, and container orchestration to streamline your IT operations."
+          data-rh= 'true'
+        />
+        <link rel="canonical" href="https://www.phinexa.io/contact" />
+        
+      </Helmet>
+    <div className='hero homepage'>
+        <motion.div 
+        variants={{
+          hidden: {x: "-50%"},
+          show: {x: "0%", transition: { duration: 0.5, type: "spring", stiffness: 100 }}
+        }}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="left">
+            <p>Simplifying</p>
+            <p>IT Complexity</p>
         </motion.div>
         <motion.div
           variants={{

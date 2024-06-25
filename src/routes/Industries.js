@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { motion } from "framer-motion"
 import './Industries.scss'
+import { Helmet } from 'react-helmet'
 
 function Industries() {
 
@@ -10,6 +11,14 @@ function Industries() {
 
   return (
     <>
+      <Helmet>
+        <title> Industries - Phinexa</title>
+        <meta
+          name="description"
+          content="Discover Phinexa's AI-driven, blockchain, and IoT solutions tailored for industries like healthcare, fintech, real estate, manufacturing, and more."
+        />
+        <link rel="canonical" href="https://www.phinexa.io/industries" />
+      </Helmet>
     <div className='hero industries'>
         <motion.div 
         variants={{
