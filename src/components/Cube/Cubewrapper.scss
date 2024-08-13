@@ -1,4 +1,6 @@
 
+@import '/src/Styles.scss';
+
 .cube-wrapper,
 .cube-iframe{
     display: flex;
@@ -9,4 +11,209 @@
 .cube-wrapper{
     // width: 100vw;
     // height: 60vh;
+}
+
+.cube-wrapper{
+    .instructions{
+        position: absolute;
+        background: $primary-color;
+        padding: 12px;
+        border-radius: 20px;
+        right: -100px;
+        bottom: 100px;
+        transform: translateX(100%); /* Start position: off-screen to the right */
+        animation: slideIn 0.3s ease-out forwards;
+
+        .inner-border{
+            border: dashed 1.5px white;
+            padding: 12px;
+            border-radius: 12px;
+            
+
+            .svgs{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        p {
+            max-width: 300px;
+            color: white;
+        }
+    }
+
+    .instructions::before{
+        content: '';
+        height: 20px;
+        width: 20px;
+        background: $primary-color;
+        display: flex;
+        position: absolute;
+        transform: rotate(45deg);
+        left: -10px;
+        top: 30px;
+    }
+}
+
+.hero.homepage{
+    overflow-x: visible;
+}
+
+.instruction-btn{
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: white;
+    color: $primary-color;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.instruction-btn:hover{
+    background: rgb(234, 255, 243)
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(40%);
+    }
+    95% {
+        opacity: 1;
+        transform: translateX(-10);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1750px){
+    .cube-wrapper{
+        .instructions{
+            right: -140px;
+            bottom: 100px;
+
+            p{
+                max-width: 200px;
+                font-size: 12px;
+            }
+
+            svg.gesture{
+                width: 80px;
+            }
+
+            .instruction-btn{
+                font-size: 12px;
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1328px){
+    .cube-wrapper{
+        .instructions{
+            right: -140px;
+            bottom: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1240px){
+    .cube-wrapper{
+        .instructions{
+            right: -30px;
+            bottom: -100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1064px){
+    .cube-wrapper{
+        .instructions{
+            right: -90px;
+            bottom: -10px;
+
+            p{
+                font-size: 10px;
+            }
+
+            svg.gesture{
+                width: 60px;
+            }
+
+            .instruction-btn{
+                font-size: 10px;
+                padding: 8px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 686px){
+    .cube-wrapper{
+        .instructions{
+            right: 20px;
+            bottom: 10px;
+
+            svg.gesture{
+                width: 60px;
+            }
+
+            .instruction-btn{
+                font-size: 10px;
+                padding: 8px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px){
+    .cube-wrapper{
+        .instructions{
+            right: 20px;
+            bottom: 170px;
+            padding: 8px;
+            // border: 1.5px solid white;
+
+        .inner-border{
+            padding: 8px;
+            // border: none;
+        }
+
+            p{
+                max-width: 150px;
+                font-size: 8px;
+            }
+
+            svg.gesture{
+                width: 60px;
+            }
+
+            .instruction-btn{
+                font-size: 8px;
+                padding: 8px 10px;
+            }
+        }
+
+        .instructions::before{
+            display: none;
+        }
+
+        .instructions::after{
+            content: '';
+            height: 15px;
+            width: 15px;
+            background: $primary-color;
+            display: flex;
+            position: absolute;
+            transform: rotate(45deg);
+            left: 30px;
+            bottom: -5px;
+            z-index: -1;
+            // border: 1.5px solid white;
+        }
+    }
 }
