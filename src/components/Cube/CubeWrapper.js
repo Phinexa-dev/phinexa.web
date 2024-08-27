@@ -5,11 +5,17 @@ import './Gestures.scss'
 function CubeWrapper() {
 
     const [instructionStep, setInstructionStep] = useState(0);
+    const [tutorialButton, setTutorialButton] = useState(false);
 
     const handleDoubleTap = () => {
         if (instructionStep === 1) {
             setInstructionStep(2);
         }
+    };
+
+    const triggerTutorial = () => {
+      setInstructionStep(1);
+      setTutorialButton(false);
     };
 
     useEffect(() => {
@@ -21,6 +27,8 @@ function CubeWrapper() {
           if ((instructionStep) === 0 && !hasVisited) {
             setInstructionStep(1);
             localStorage.setItem("hasVisited", "true");
+          } else if (hasVisited) {
+            setTutorialButton(true);
           }
         }, 2500);
 
@@ -32,12 +40,20 @@ function CubeWrapper() {
                 handleDoubleTap();
             }
 
-            console.log('hello');
-
             lastTap = currentTime;
         };
 
-        canvas.addEventListener('click', onCanvasClick);
+        if (canvas) {
+          // Add event listener for double-click
+          canvas.addEventListener('dblclick', function() {
+              alert('Canvas double-clicked!');
+              // Perform your action here
+          });
+        } else {
+            console.error('Canvas not found within the iframe.');
+        }
+
+        // canvas.addEventListener('click', onCanvasClick);
 
         return () => {
             canvas.removeEventListener('click', onCanvasClick);
@@ -112,6 +128,9 @@ function CubeWrapper() {
                       <div className='instruction-btn' onClick={()=> setInstructionStep(4)}>Got It</div>
                     </div>
                 </div>
+            )}
+            {(tutorialButton || instructionStep === 4) && (
+                <button className='show-instruction-btn' onClick={() => triggerTutorial()} >Click Here for cube movement guide</button>
             )}
         </div>
     );
